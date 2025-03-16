@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
             "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Edge",
             "request": "launch",
-            "name": "index.html",
-            "file": "c:\\Users\\gabri\\OneDrive\\Documents\\GitHub\\DIGA3008A\\index.html"
-        }
+            "type": "msedge",
+            "url": "https://gabyhon.github.io/DIGA3008A/",
+            "webRoot": "${workspaceFolder}"
+        },
     ]
 }
