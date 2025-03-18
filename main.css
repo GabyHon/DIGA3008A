@@ -2,7 +2,8 @@ h1{
     color: hsl(198, 84%, 51%);
 }
 
-.h-entry{
+.e-content{
     text-align: justify;
-    color: coral;
+    color: #d35cd7;
+    font-family: "Galindo", sans-serif;
 }
