@@ -1,9 +1,11 @@
-h1{
+h1 {
     color: hsl(198, 84%, 51%);
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.e-content{
+.e-content {
     text-align: justify;
     color: #d35cd7;
-    font-family: "Galindo", sans-serif;
 }
