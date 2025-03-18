@@ -1,3 +1,8 @@
 h1{
     color: hsl(198, 84%, 51%);
 }
+
+.h-entry{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
