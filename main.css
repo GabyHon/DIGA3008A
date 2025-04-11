@@ -1,11 +1,30 @@
+body{
+    background: linear-gradient(#416C9D #151515);
+}
+
 h1 {
-    color: hsl(198, 84%, 51%);
+    color: #19aceb;
     font-family: "Galindo", sans-serif;
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
+    font-size: 5rem;
 }
 
 .e-content {
     text-align: justify;
     color: #d35cd7;
+}
+
+li{
+    /* list-style-image: url("Images/PlanetIcon.png"); */
+    /* list-style-image: repeating-radial-gradient(circle at center, pink, black); */
+    /* list-style-image: radial-gradient(circle at center in hsl longer hue, green 0, blue, red 50%);
+    list-style-type: space-counter; */
+    /* list-style: lower-alpha, lower-latin; */
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+li:hover{
+    cursor: url("Images/PlanetIcon.png"), pointer;
 }
