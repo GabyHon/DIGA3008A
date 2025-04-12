@@ -1,14 +1,69 @@
-body{
+/* Styling specifically for the homepage */
+#HomeTitle
+{
+    position: sticky;
+    top: 5vh;
+}
+
+#HomeImg
+{
+    padding: 10px;
+    max-height: max-content;
+    min-height: min-content;
+    height: auto;
+    width: 50rem;
+    max-width: 100%;
+}
+
+#MenuBtn
+{
+    height: 8vh;
+    width: 3vw;
+    justify-self: end;
+    background-color: transparent;
+    border: none;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+#MenuBtn:active
+{
+    box-shadow: 0px 0px 20px #FDD6FF;
+}
+
+#MenuBtn:hover
+{
+    background-color: #E6A6FF;
+    border-radius: 40%;
+    border: #69A1DD;
+}
+
+.NavBtn
+{
+   display: flex;
+   width: 80%; 
+   justify-content: flex-end;
+   
+   position: sticky;
+   top: 5vh;
+}
+
+body
+{
     height: 300vh;
-    margin: 5rem;
-    width: 80vw;
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background: radial-gradient(circle at bottom, #69A1DD 1%, #416C9D 20%, #151515 60%) no-repeat;
 
     padding: 0 50px;
 }
 
-h1 {
+h1
+{
     color: #19aceb;
     font-family: "Galindo", sans-serif;
     font-weight: 400;
@@ -17,21 +72,29 @@ h1 {
     text-align: center;
 }
 
-.e-content {
+.e-content
+{
     text-align: justify;
     color: #d35cd7;
 }
 
-li{
-    /* list-style-image: url("Images/PlanetIcon.png"); */
-    /* list-style-image: repeating-radial-gradient(circle at center, pink, black); */
-    /* list-style-image: radial-gradient(circle at center in hsl longer hue, green 0, blue, red 50%);
-    list-style-type: space-counter; */
-    /* list-style: lower-alpha, lower-latin; */
+ul li
+{
+    height: 3vh;
+    display: inline-flex;
     list-style-type: none;
-    padding-bottom: 10px;
+    padding: 20px 40px;
+    border-radius: 50%;
+    text-align: center;
 }
 
-li:hover{
-    cursor: url("Images/PlanetIcon.png"), pointer;
+li:hover
+{
+    cursor: pointer;
+}
+
+li.ActivePage
+{
+    background-color: #FDD6FF;
+    cursor: default;
 }
