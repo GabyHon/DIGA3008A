@@ -7,15 +7,13 @@
 
 #HomeImg
 {
-    padding: 10px;
+    margin: 10px;
     max-height: max-content;
     min-height: min-content;
     height: auto;
     width: 50rem;
     max-width: 100%;
 }
-
-
 
 h1
 {
@@ -156,4 +154,96 @@ body
   'wght' 600,
   'GRAD' -20,
   'opsz' 48
+}
+
+/* Media query for responsive design */
+
+/* Mobile deivces */
+@media (max-width: 900px)
+{
+    #HomeTitle
+    {
+        font-size: 3rem;
+        margin: 10px;
+    }
+
+    #HomeImg
+    {
+        margin: 5px;
+        padding: 0;
+    }
+
+    body{
+        padding: 0;
+    }
+
+    .NavBar
+    {
+        height: auto;
+        margin-inline: 10px;
+    }
+
+    .NavBar ul
+    {
+        text-align: left;
+        display: block;
+        padding: 0;
+    }
+
+    .NavBar ul li
+    {
+        text-align: left;
+        display: block;
+        padding: 2px;
+    }
+
+    .NavBar ul li a{
+        padding: 2px 0px;
+        font-size: 1rem;
+    }
+
+    .NavBar li.ActivePage
+    {
+        background-color: #FDD6FF;
+        background-size: 10% 10%;
+        padding: 0 0.5rem;
+        cursor: default;
+        border-radius: 1rem;
+        font-size: 1rem;
+    }   
+
+    .Navigation
+    {
+        height: 20vh;
+        top: 25vh;
+    }
+
+    #MenuBtn
+    {
+        height: 5vh;
+        width: 5vw;
+    }
+}
+
+/* Tablet deivces */
+@media (min-width: 900px)
+{
+    body
+    {
+        padding: 0;
+    }
+
+    .Navigation
+    {
+        height: 10vh;
+        top: 15vh;
+    }
+
+    .NavBar ul
+    {
+        text-align: left;
+        display: block;
+        padding: 0;
+        justify-content: center;
+    }
 }
