@@ -118,9 +118,11 @@ nav li.ActivePage
 
 .material-symbols-outlined 
 {
+    font-size: 3rem;
+
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
+  'wght' 600,
+  'GRAD' -20,
   'opsz' 48
 }
