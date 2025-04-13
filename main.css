@@ -51,29 +51,23 @@ body
     display: none;
 }
 
-.NavBar
-{
-    display: none;
-}
-
 .MenuCheckbox:checked ~ .NavBar
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    visibility: visible;
 }
 
 #MenuBtn
 {
     height: 8vh;
-    width: 4vw;
-    padding-left: 8px;
+    width: 8vw;
+    padding: 0 8px; 
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     border: none;
     transition: all 0.01s ease;
     cursor: pointer;
+    z-index: 10;
 }
 
 #MenuBtn:active
@@ -101,38 +95,36 @@ body
    transition: all 3s;
 }
 
-nav
+.NavBar
 {
-    display: flex;
-    height: 25vh;
-    width: 90%;
+    visibility: hidden;
+    position: absolute;
+    width: 85%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    /* padding: 20px 10px; */
+    align-items: flex-start;
     margin-inline: 20px;
 }
 
-nav ul li
+.NavBar ul li
 {
-    /* margin-right: 40px; */
     text-align: center;
     display: inline-block;
 }
 
-nav ul li a{
+.NavBar ul li a{
     padding: 40px;
     font-size: 2rem;
     text-decoration: none;
     color: #69A1DD;
 }
 
-nav li a:hover
+.NavBar li a:hover
 {
     cursor: pointer;
 }
 
-nav li.ActivePage
+.NavBar li.ActivePage
 {
     background-color: #FDD6FF;
     padding: 1rem 2rem;
@@ -141,7 +133,7 @@ nav li.ActivePage
     font-size: 2rem;
 }
 
-/* GoogleFont variable font */
+/* GoogleFont variable font for menu icon*/
 .material-symbols-outlined 
 {
     font-size: 6.8vh;
