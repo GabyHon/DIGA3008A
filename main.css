@@ -51,24 +51,28 @@ body
     display: none;
 }
 
-.MenuCheckbox:checked ~ .NavBar
-{
-    display: flex;
-    z-index: 10;
-}
-
 .NavBar
 {
     display: none;
 }
 
+.MenuCheckbox:checked ~ .NavBar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #MenuBtn
 {
     height: 8vh;
-    width: 3vw;
-    justify-self: end;
+    width: 4vw;
+    padding-left: 8px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     border: none;
-    transition: all 0.1s ease;
+    transition: all 0.01s ease;
     cursor: pointer;
 }
 
@@ -80,39 +84,44 @@ body
 #MenuBtn:hover
 {
     background-color: #E6A6FF;
-    border-radius: 40%;
-    border: #69A1DD;
+    border-radius: 50%;
 }
 
-.NavBtn
+.Navigation
 {
    display: flex;
-   width: 80%; 
+   height: 10vh;
+   width: 90%; 
    justify-content: flex-end;
+   align-items: center;
    
    position: sticky;
-   top: 6vh;
+   top: 15vh;
+
+   transition: all 3s;
 }
 
 nav
 {
     display: flex;
-    height: 10vh;
-    width: 80%;
+    height: 25vh;
+    width: 90%;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
-    padding: 20px 10px;
+    align-items: center;
+    /* padding: 20px 10px; */
+    margin-inline: 20px;
 }
 
 nav ul li
 {
-    margin-right: 20px;
+    /* margin-right: 40px; */
     text-align: center;
     display: inline-block;
 }
 
 nav ul li a{
+    padding: 40px;
     font-size: 2rem;
     text-decoration: none;
     color: #69A1DD;
@@ -135,7 +144,7 @@ nav li.ActivePage
 /* GoogleFont variable font */
 .material-symbols-outlined 
 {
-    font-size: 3rem;
+    font-size: 6.8vh;
 
   font-variation-settings:
   'FILL' 0,
