@@ -221,3 +221,44 @@ h1
 {
     margin-left: 2rem;
 }
+
+.Images
+{
+    height: 30vh;
+    width: 30vw;
+    padding: 2rem;
+}
+
+.Games
+{
+    height: 115vh;
+}
+
+.Games section
+{
+    text-align: justify;
+    color: #fafafad5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2rem;
+    flex-direction: column-reverse;
+    
+    padding-inline: 1rem ;
+}
+
+.Item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid;
+    border-color: #c245f3;
+    border-width: 0.05rem;
+    border-radius: 10%;
+    border-spacing: 0.5rem;
+    padding: 1rem;
+    padding-inline: 1rem;
+
+    margin-top: 2rem;
+}
