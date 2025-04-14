@@ -1,0 +1,244 @@
+body
+{
+    height: 94vh;
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 30%) no-repeat;
+
+    padding: 0 50px;
+}
+
+h1
+{
+    color: #5bbcf4;
+    
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+      
+    font-size: 5rem; 
+    text-align: center;
+    justify-content: center;
+
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+/* GoogleFont variable font for menu icon*/
+.material-symbols-outlined 
+{
+    transform: scale(3);
+    color: #5bbcf4;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' -20,
+    'opsz' 48
+}
+
+/* Colour change of the icon when hovering over button */
+#MenuBtn:hover .material-symbols-outlined
+{
+    color: #151515;
+}
+
+/* Navigation */
+.MenuCheckbox
+{
+    display: none;
+}
+
+.MenuCheckbox:checked ~ .NavBar
+{
+    visibility: visible;
+}
+
+#MenuBtn
+{
+    height: 10vh;
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: dotted;
+    border-radius: 50%;
+    border-color: #E6A6FF;
+    transition: all 0.01s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#MenuBtn:active
+{
+    box-shadow: 0px 0px 20px #FDD6FF;
+}
+
+#MenuBtn:hover
+{
+    background-color: #E6A6FF;
+    border-radius: 50%;
+}
+
+.Navigation
+{
+   display: flex;
+   height: 10vh;
+   width: 80%; 
+   justify-content: flex-end;
+   align-items: center;
+   transition: all 3s;
+}
+
+.NavBar
+{
+    visibility: hidden;
+    position: absolute;
+    width: 63%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.NavBar ul li
+{
+    text-align: center;
+    display: inline-block;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.NavBar ul li a
+{    
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #92A8D1;
+}
+
+.NavBar li a:hover
+{
+    cursor: pointer;
+    color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+    padding: 0.1 0px;
+}
+
+.NavBar li.ActivePage
+{
+    background-color: #FDD6FF;
+    color: #151515;
+    padding: 1rem 2rem;
+    cursor: default;
+    border-radius: 10rem;
+    font-size: 2rem;
+}
+
+.NavBar li.ActivePage:hover
+{
+    cursor: default;
+}
+
+/* Sub-pages drop-down list styling */
+.NavBar ul li .SubPages
+{
+    display: none;
+    position: absolute;
+    /* align dropdown below parent menu item */
+    top: 100%;
+    left: -40rem;
+    padding: 0;
+    z-index: 5;
+}
+
+.NavBar ul li:hover .SubPages
+{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width: 65vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar ul .SubPages
+{
+    margin: 0;
+    padding: 0;
+}
+
+.SubPages li
+{
+    text-align: right;
+    justify-content: left;
+    margin: 0;
+}
+
+.SubPages li a
+{
+    display: flex;
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    color: #5bbcf4;
+    text-decoration: none;
+}
+
+.SubPages li a:hover
+{
+    cursor: pointer;
+    color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+}
+
+/* Sub page content */
+.p-author
+{
+    color: #fafafad5;
+}
+
+.dt-published
+{
+    color: #fafafad5;
+}
+
+.h-entry
+{
+    height: 75vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 15rem;
+    padding-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.e-content
+{
+    text-align: justify;
+    color: #fafafad5;
+}
+
+a.Reference:link
+{
+    color: #5bbcf4;
+}
+
+a.Reference:visited
+{
+    color: #E6A6FF;
+}
+
+a.Reference:hover, a.Reference:focus
+{
+    color: #151515;
+    background-color: #E6A6FF;
+}
