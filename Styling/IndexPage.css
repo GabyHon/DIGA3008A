@@ -157,14 +157,14 @@ h1
     border-color: #c245f3;
 }
 
-/* Sub-pages drop down styling */
+/* Sub-pages drop-down list styling */
 .NavBar ul li .SubPages
 {
     display: none;
     position: absolute;
     /* align dropdown below parent menu item */
     top: 100%;
-    left: -50rem;
+    left: -40rem;
     padding: 0;
     z-index: 5;
 }
@@ -174,7 +174,7 @@ h1
     display: flex;
     flex-direction: row;
     float: left;
-    width: 70vw;
+    width: 65vw;
     height: 10vh;
     justify-content: center;
     align-items: center;

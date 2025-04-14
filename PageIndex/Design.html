@@ -8,9 +8,11 @@
     <meta name="description"
         content="The design homepage which contains the links to the separate pages of the design section.">
     <meta name="keywords"
-        content="Design Homepage, Webpage, Wireframes, Reference material, DIGA3008, Interactive Media, HTML">
+        content="Design Homepage, Webpage, Wireframes, Reference material, DIGA3008, Interactive Media, HTML, CSS">
     <title>Design Homepage - Gaby</title>
+    <link rel="stylesheet" href="./Styling/main.css">
     <link rel="stylesheet" href="../Styling/IndexPage.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,7 +20,6 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=planet" />
-    <link rel="stylesheet" href="./Styling/main.css">
 </head>
 
 <body>
@@ -36,11 +37,13 @@
                 <li><a href="../PageIndex/Profile.html">Profile</a></li>
                 <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
                 <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
-                <li class="ActivePage">Design</li>
-                <ul>
-                    <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
-                    <li><a href="../DesignPages/StyleProcess.html">Style Process</a></li>
-                </ul>
+                <li class="ActivePage">
+                    Design
+                    <ul class="SubPages">
+                        <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
+                        <li><a href="../DesignPages/StyleProcess.html">Style Process</a></li>
+                    </ul>    
+                </li>
                 <li><a href="../PageIndex/Essay.html">Essays</a></li>
             </ul>
         </nav>
