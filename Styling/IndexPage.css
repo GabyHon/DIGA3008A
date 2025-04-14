@@ -143,6 +143,7 @@ h1
 .NavBar li.ActivePage
 {
     background-color: #FDD6FF;
+    color: #151515;
     padding: 1rem 2rem;
     cursor: default;
     border-radius: 10rem;
