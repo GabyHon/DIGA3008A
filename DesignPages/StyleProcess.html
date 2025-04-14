@@ -10,57 +10,72 @@
     <meta name="keywords"
         content="Style, Process, Webpage, Designs, Fonts, Colours, Reference material, DIGA3008, Interactive Media, HTML">
     <title>Style Process - Gaby</title>
+    <link rel="stylesheet" href="../Styling/SubPage.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wdth,wght@0,100..125,100..900;1,100..125,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=planet" />
 </head>
 
-<body>
+<body class="StyleProc">
     <h1> Conceptualisation and Designs</h1>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Homepage</a></li>
-            <li><a href="../PageIndex/Profile.html">Profile</a></li>
-            <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
-            <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
-            <li><a href="../PageIndex/Design.html">Design</a></li>
+    <div class="Navigation">
+        <input type="checkbox" name="MenuToggle" class="MenuCheckbox" id="CheckBox" title="ToggleMenu">
+        <label for="CheckBox" class="IndexPg" id="MenuBtn">
+            <span class="material-symbols-outlined">
+                planet
+            </span>
+        </label>
+        <nav class="NavBar">
             <ul>
-                <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
-                <li>Style Process</li>
+                <li><a href="../index.html">Homepage</a></li>
+                <li><a href="../PageIndex/Profile.html">Profile</a></li>
+                <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
+                <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
+                <li><a href="../PageIndex/Design.html">Design</a>
+                    <ul class="SubPages">
+                        <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
+                        <li><a href="../DesignPages/StyleProcess.html">Style Process</a></li>
+                    </ul>
+                </li>
+                <li><a href="../PageIndex/Essay.html">Essays</a></li>
             </ul>
-            <li><a href="../PageIndex/Essay.html">Essays</a></li>
-        </ul>
-    </nav>
+        </nav>
+    </div>
 
-    <section>
-        <h2 class="e-content">Original Wireframes</h2>
-        <p>
-            <img src="./Wireframes/OriginalHomepageWireframe.jpg" alt="Original homepage wireframe." width="300" height="200">
-            Original homepage wireframe with a text block and button in the middle of the page.
+    <section class="e-content">
+        <h2>Original Wireframes</h2>
+
+        <img class="Images" src="./Wireframes/OriginalHomepageWireframe.jpg" alt="Original homepage wireframe.">
+        <p>Original homepage wireframe with a text block and button in the middle of the page.
         </p>
 
-        <p>
-            <img src="./Wireframes/OriginalNavigationWireframe1.jpg" alt="Original navigation wireframe 1." width="300" height="200">
-            Original navigation wireframe 1 with a heading block and a text block underneath for more description in
+
+        <img class="Images" src="./Wireframes/OriginalNavigationWireframe1.jpg" alt="Original navigation wireframe 1.">
+        <p>Original navigation wireframe 1 with a heading block and a text block underneath for more description in
             the middle of the page.
             Smaller versions shown to the left and right of this. Buttons to scroll through the list.
         </p>
 
-        <p>
-            <img src="./Wireframes/OriginalNavigationWireframe2.jpg" alt="Original navigation wireframe 2." width="300" height="200">
-            Original navigation wireframe 2 with a text block and an image in the middle of the page. Semi-circle on
+
+        <img class="Images" src="./Wireframes/OriginalNavigationWireframe2.jpg" alt="Original navigation wireframe 2.">
+        <p>Original navigation wireframe 2 with a text block and an image in the middle of the page. Semi-circle on
             the left showing current selection of the list on page.
             Navigation image on the top right hand corner which will open the navigation bar to other main pages for
             example the homepage or profile pages.
         </p>
 
         <p>
-            <img src="./Wireframes/OriginalDesignWireframe1.jpg" alt="Original design wireframe 1." width="300" height="200">
+            <img class="Images" src="./Wireframes/OriginalDesignWireframe1.jpg" alt="Original design wireframe 1.">
             Original design wireframe 1 with a heading block for section on the website, a text block for a smaller
             heading
             of page in the section, and text block for a description placed in the middle of the page.
         </p>
 
-        <p>
-            <img src="./Wireframes/OriginalDesignWireframe2.jpg" alt="Original design wireframe 2." width="300" height="200">
-            Original design wireframe 2 with a text block at the top of the page for the title of the page and a
+
+        <img class="Images" src="./Wireframes/OriginalDesignWireframe2.jpg" alt="Original design wireframe 2."=>
+        <p>Original design wireframe 2 with a text block at the top of the page for the title of the page and a
             block with an image and text describing the image all placed in the middle of the page. Semi-circle of
             the left side of the page with circles in the middle will show the user which page if currently being
             viewed.
@@ -69,14 +84,14 @@
 
     <section class="e-content">
         <h2>Possible Designs</h2>
-        <p>
-            <img src="./DesignImages/PossibleDesign1.jpg" alt="Option wireframe 1." width="300" height="200">
-            As a possible wireframe, the wireframe shown is the original wireframe idea that will be used for each page.
+
+        <img class="Images" src="./DesignImages/PossibleDesign1.jpg" alt="Option wireframe 1.">
+        <p>As a possible wireframe, the wireframe shown is the original wireframe idea that will be used for each page.
         </p>
 
-        <p>
-            <img src="./DesignImages/PossibleDesign2.jpg" alt="Option wireframe 2." width="300" height="200">
-            The second possible wireframe is shown to be more traditional where the navigation bar sits at the top of
+
+        <img class="Images" src="./DesignImages/PossibleDesign2.jpg" alt="Option wireframe 2.">
+        <p>The second possible wireframe is shown to be more traditional where the navigation bar sits at the top of
             the
             page and the content of the page is in the middle. I would consider this wireframe to not be so minimalistic
             since the content of the feels that it takes up a lot of the space on the page. However, this could be the
@@ -89,8 +104,9 @@
         <h2>Reference Material</h2>
         <p>
             The positioning of my content in the middle of each page is taken from three refernce websites:
-            <a href="https://www.hivetown.co/" target="_blank">Hivetown</a>, <a href="https://www.arena.net/en"
-                target="_blank">ArenaNet</a>, and <a href="https://hsr.hoyoverse.com/en-us/home" target="_blank">Honkai:
+            <a class="Reference" href="https://www.hivetown.co/" target="_blank">Hivetown</a>, <a class="Reference"
+                href="https://www.arena.net/en" target="_blank">ArenaNet</a>, and <a class="Reference"
+                href="https://hsr.hoyoverse.com/en-us/home" target="_blank">Honkai:
                 Star Rail</a>.
         </p>
 
