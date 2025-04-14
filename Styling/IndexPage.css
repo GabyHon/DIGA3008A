@@ -37,13 +37,13 @@ h1
     text-align: center;
     justify-content: center;
 
-    margin: 1rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
 }
 
 /* GoogleFont variable font for menu icon*/
 .material-symbols-outlined 
 {
-    transform: scale(2);
+    transform: scale(3);
     color: #5bbcf4;
     font-variation-settings:
     'FILL' 0,
@@ -99,18 +99,17 @@ h1
 {
    display: flex;
    height: 10vh;
-   width: 10%; 
+   width: 80%; 
    justify-content: flex-end;
    align-items: center;
    transition: all 3s;
-   margin-left: 10rem;
 }
 
 .NavBar
 {
     visibility: hidden;
     position: absolute;
-    width: 85%;
+    width: 63%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -120,6 +119,7 @@ h1
 {
     text-align: center;
     display: inline-block;
+    justify-content: flex-end;
 }
 
 .NavBar ul li a
