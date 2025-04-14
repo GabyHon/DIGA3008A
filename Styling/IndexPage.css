@@ -12,6 +12,12 @@ body
     padding: 0 50px;
 }
 
+header
+{
+    display: flex;
+    flex-direction: row;
+}
+
 h1
 {
     color: #5bbcf4;
@@ -37,4 +43,99 @@ h1
   'wght' 600,
   'GRAD' -20,
   'opsz' 48
+}
+
+/* Navigation */
+.MenuCheckbox
+{
+    display: none;
+}
+
+.MenuCheckbox:checked ~ .NavBar
+{
+    visibility: visible;
+}
+
+#MenuBtn
+{
+    height: 8vh;
+    width: 8vw;
+    padding: 0 8px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: dotted;
+    border-radius: 50%;
+    border-color: #E6A6FF;
+    transition: all 0.01s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#MenuBtn:active
+{
+    box-shadow: 0px 0px 20px #FDD6FF;
+}
+
+#MenuBtn:hover
+{
+    background-color: #E6A6FF;
+    border-radius: 50%;
+}
+
+.Navigation
+{
+   display: flex;
+   height: 10vh;
+   width: 90%; 
+   justify-content: flex-end;
+   align-items: center;
+   
+   position: sticky;
+   top: 15vh;
+
+   transition: all 3s;
+}
+
+.NavBar
+{
+    visibility: hidden;
+    position: absolute;
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-inline: 20px;
+}
+
+.NavBar ul li
+{
+    text-align: center;
+    display: inline-block;
+}
+
+.NavBar ul li a
+{    
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #92A8D1;
+}
+
+.NavBar li a:hover
+{
+    cursor: pointer;
+    color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+    padding: 0.1 0px;
+}
+
+.NavBar li.ActivePage
+{
+    background-color: #FDD6FF;
+    padding: 1rem 2rem;
+    cursor: default;
+    border-radius: 10rem;
+    font-size: 2rem;
 }
