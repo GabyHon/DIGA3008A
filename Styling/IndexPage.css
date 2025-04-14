@@ -1,0 +1,40 @@
+body
+{
+    height: 94vh;
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 30%) no-repeat;
+
+    padding: 0 50px;
+}
+
+h1
+{
+    color: #5bbcf4;
+    
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+      
+    font-size: 5rem; 
+    text-align: center;
+}
+
+/* GoogleFont variable font for menu icon*/
+.material-symbols-outlined 
+{
+    font-size: 6.8vh;
+
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' -20,
+  'opsz' 48
+}

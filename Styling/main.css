@@ -15,25 +15,7 @@
     max-width: 100%;
 }
 
-h1
-{
-    color: #5bbcf4;
-    
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-      
-    /* font-family: "Galindo", sans-serif;
-    font-weight: 400;
-    font-style: normal;*/
-    font-size: 5rem; 
-    text-align: center;
-}
-
-body
+#Home
 {
     height: 300vh;
     margin: 2rem;
@@ -47,10 +29,39 @@ body
     padding: 0 50px;
 }
 
+h1
+{
+    color: #5bbcf4;
+    
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+      
+    font-size: 5rem; 
+    text-align: center;
+}
+
+body
+{
+    height: 94vh;
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 2%, #151515 20%) no-repeat;
+
+    padding: 0 50px;
+}
+
 .e-content
 {
     text-align: justify;
-    color: #d35cd7;
+    color: #fefefe;
 }
 
 /* Navigation */
@@ -122,8 +133,9 @@ body
     display: inline-block;
 }
 
-.NavBar ul li a{
-    padding: 40px;
+.NavBar ul li a
+{    
+    padding: 1rem 2rem;
     font-size: 2rem;
     text-decoration: none;
     color: #92A8D1;
@@ -133,6 +145,9 @@ body
 {
     cursor: pointer;
     color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+    padding: 0.1 0px;
 }
 
 .NavBar li.ActivePage
