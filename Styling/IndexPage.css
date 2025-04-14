@@ -12,16 +12,6 @@ body
     padding: 0 50px;
 }
 
-header
-{
-    display: flex;
-    flex-direction: row;
-    width: 75%;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 10px 0px;
-}
-
 h1
 {
     color: #5bbcf4;
