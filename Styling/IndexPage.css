@@ -120,6 +120,7 @@ h1
     text-align: center;
     display: inline-block;
     justify-content: flex-end;
+    position: relative;
 }
 
 .NavBar ul li a
@@ -146,4 +147,66 @@ h1
     cursor: default;
     border-radius: 10rem;
     font-size: 2rem;
+}
+
+.NavBar li.ActivePage:hover
+{
+    cursor: pointer;
+    border-style: dashed;
+    border-radius: 10rem;
+    border-color: #c245f3;
+}
+
+/* Sub-pages drop down styling */
+.NavBar ul li .SubPages
+{
+    display: none;
+    position: absolute;
+    /* align dropdown below parent menu item */
+    top: 100%;
+    left: -50rem;
+    padding: 0;
+    z-index: 5;
+}
+
+.NavBar ul li:hover .SubPages
+{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width: 70vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar ul .SubPages
+{
+    margin: 0;
+    padding: 0;
+}
+
+.SubPages li
+{
+    text-align: right;
+    justify-content: left;
+    margin: 0;
+}
+
+.SubPages li a
+{
+    display: flex;
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    color: #5bbcf4;
+    text-decoration: none;
+}
+
+.SubPages li a:hover
+{
+    cursor: pointer;
+    color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+    /* padding: 0.1 0px; */
 }
