@@ -15,15 +15,15 @@ body
 h1
 {
     color: #5bbcf4;
-    
+
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-    "wdth" 100;
-      
-    font-size: 5rem; 
+        "wdth" 100;
+
+    font-size: 5rem;
     text-align: center;
     justify-content: center;
 
@@ -31,15 +31,15 @@ h1
 }
 
 /* GoogleFont variable font for menu icon*/
-.material-symbols-outlined 
+.material-symbols-outlined
 {
     transform: scale(3);
     color: #5bbcf4;
     font-variation-settings:
-    'FILL' 0,
-    'wght' 600,
-    'GRAD' -20,
-    'opsz' 48
+        'FILL' 0,
+        'wght' 600,
+        'GRAD' -20,
+        'opsz' 48
 }
 
 /* Colour change of the icon when hovering over button */
@@ -54,7 +54,7 @@ h1
     display: none;
 }
 
-.MenuCheckbox:checked ~ .NavBar
+.MenuCheckbox:checked~.NavBar
 {
     visibility: visible;
 }
@@ -87,12 +87,12 @@ h1
 
 .Navigation
 {
-   display: flex;
-   height: 10vh;
-   width: 80%; 
-   justify-content: flex-end;
-   align-items: center;
-   transition: all 3s;
+    display: flex;
+    height: 10vh;
+    width: 80%;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 3s;
 }
 
 .NavBar
@@ -114,7 +114,7 @@ h1
 }
 
 .NavBar ul li a
-{    
+{
     padding: 1rem 2rem;
     font-size: 2rem;
     text-decoration: none;
@@ -214,7 +214,7 @@ h1
     font-size: 2rem;
     flex-direction: row-reverse;
 
-    padding-inline: 1rem ;
+    padding-inline: 1rem;
 }
 
 .ContactInfo
@@ -243,8 +243,8 @@ h1
     align-items: flex-start;
     font-size: 2rem;
     flex-direction: column-reverse;
-    
-    padding-inline: 1rem ;
+
+    padding-inline: 1rem;
 }
 
 .Item
@@ -261,4 +261,371 @@ h1
     padding-inline: 1rem;
 
     margin-top: 2rem;
+}
+
+/* Media query for responsive design */
+
+/* Mobile deivces in portrait mode */
+@media (max-width: 750px) and (orientation: portrait)
+{
+    body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 102vh;
+    }
+
+    h1
+    {
+        font-size: 2rem;
+    }
+
+    .NavBar
+    {
+        height: auto;
+        margin-inline: 10px;
+        padding-top: 1rem;
+    }
+
+    .NavBar ul
+    {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+        margin-top: 20rem;
+    }
+
+    .NavBar ul li
+    {
+        text-align: center;
+        display: block;
+        padding: 4px;
+    }
+
+    .NavBar ul li a
+    {
+        padding: 2px 0px;
+        font-size: 1rem;
+    }
+
+    .NavBar li.ActivePage
+    {
+        background-color: #FDD6FF;
+        padding: 0 0.5rem;
+        cursor: default;
+        font-size: 1rem;
+    }
+
+    .NavBar li a:hover
+    {
+        cursor: pointer;
+        color: #E6A6FF;
+        border-style: dashed;
+        border-radius: 14%;
+        padding: 0.3rem;
+    }
+
+    .Navigation
+    {
+        height: 20vh;
+        top: 32vh;
+    }
+
+    #MenuBtn
+    {
+        width: 15vw;
+    }
+
+    .Me body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 40vh;
+    }
+    
+    .h-card
+    {
+        font-size: 1rem;
+        flex-direction: column;
+        height: 62vh;
+    } 
+
+    .Me .NavBar ul
+    {
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
+    }
+}
+
+/* Mobile deivces in landscape mode */
+@media (max-width: 750px) and (orientation: landscape)
+{
+    body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 102vh;
+    }
+
+    h1
+    {
+        font-size: 2rem;
+    }
+
+    .NavBar
+    {
+        height: auto;
+        margin-inline: 10px;
+        padding-top: 1rem;
+    }
+
+    .NavBar ul
+    {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+        margin-top: 18rem;
+    }
+
+    .NavBar ul li
+    {
+        text-align: center;
+        display: block;
+        padding: 4px;
+    }
+
+    .NavBar ul li a
+    {
+        padding: 2px 0px;
+        font-size: 1rem;
+    }
+
+    .NavBar li.ActivePage
+    {
+        background-color: #FDD6FF;
+        padding: 0 0.5rem;
+        cursor: default;
+        font-size: 1rem;
+    }
+
+    .NavBar li a:hover
+    {
+        cursor: pointer;
+        color: #E6A6FF;
+        border-style: dashed;
+        border-radius: 14%;
+        padding: 0.3rem;
+    }
+
+    .Navigation
+    {
+        height: 20vh;
+        top: 32vh;
+    }
+
+    #MenuBtn
+    {
+        width: 10vw;
+        height: 20vh;
+    }
+
+    .Me body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 30vh;
+    }
+    
+    .h-card
+    {
+        font-size: 1rem;
+        flex-direction: column;
+        height: 65vh;
+    } 
+
+    .Me .NavBar ul
+    {
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
+    }
+}
+
+/* Tablet deivces and larger screen mobile devices in landscape */
+@media (min-width: 750px) and (max-width: 1024.98px) and (orientation: portrait)
+{
+    body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 102vh;
+    }
+
+    .NavBar
+    {
+        height: 30vh;
+        right: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem;
+        top: 12vh;
+    }
+
+    .NavBar ul
+    {
+        height: 15vh;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 20rem;
+        margin-right: 10rem;
+    }
+
+    .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        padding: 0px;
+        margin: 0.5rem 0rem;
+    }
+
+    .NavBar ul li a
+    {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .NavBar li.ActivePage
+    {
+        display: flex;
+        background-color: #FDD6FF;
+        padding: 0 0.3rem;
+        cursor: default;
+        font-size: 2rem;
+        margin: 0;
+        height: 8vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NavBar li a:hover
+    {
+        cursor: pointer;
+        color: #E6A6FF;
+        border-style: dashed;
+        border-radius: 14%;
+        padding: 0.3rem;
+    }
+
+    .Navigation
+    {
+        height: 15vh;
+        width: 80vw;
+        top: 4vh;
+    }
+
+    #MenuBtn
+    {
+        height: 5vh;
+        width: 5vw;
+    }
+
+    .material-symbols-outlined
+    {
+        font-size: 4vh;
+    }
+
+    #MenuBtn
+    {
+        height: 10vh;
+        width: 12vw;
+    }
+
+    .SubPages
+    {
+        display: flex;
+    }
+
+    .Me body
+    {
+        padding: 0;
+        margin: 0.5rem;
+        height: 25vh;
+    }
+    
+    .h-card
+    {
+        font-size: 2rem;
+        flex-direction: column;
+        height: 68vh;
+    } 
+
+    .Me .NavBar ul
+    {
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
+    }
 }
