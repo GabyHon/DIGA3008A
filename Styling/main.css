@@ -96,6 +96,12 @@ body
     border-radius: 50%;
 }
 
+/* Colour change of the icon when hovering over button */
+#MenuBtn:hover .material-symbols-outlined
+{
+    color: #151515;
+}
+
 .Navigation
 {
    display: flex;
@@ -157,7 +163,8 @@ body
 /* GoogleFont variable font for menu icon*/
 .material-symbols-outlined 
 {
-    font-size: 6.8vh;
+    font-size: 6.8vh; 
+    color: #5bbcf4;
 
   font-variation-settings:
   'FILL' 0,
@@ -169,7 +176,7 @@ body
 /* Media query for responsive design */
 
 /* Mobile deivces */
-@media (max-width: 900px)
+@media (max-width: 750px)
 {
     #HomeTitle
     {
@@ -191,6 +198,7 @@ body
     {
         height: auto;
         margin-inline: 10px;
+        padding-top: 1rem;
     }
 
     .NavBar ul
@@ -198,13 +206,14 @@ body
         text-align: left;
         display: block;
         padding: 0;
+        margin: 0;
     }
 
     .NavBar ul li
     {
-        text-align: left;
+        text-align: center;
         display: block;
-        padding: 2px;
+        padding: 4px;
     }
 
     .NavBar ul li a{
@@ -215,23 +224,35 @@ body
     .NavBar li.ActivePage
     {
         background-color: #FDD6FF;
-        background-size: 10% 10%;
         padding: 0 0.5rem;
         cursor: default;
-        border-radius: 1rem;
         font-size: 1rem;
-    }   
+    }
+    
+    .NavBar li a:hover
+    {
+        cursor: pointer;
+        color: #E6A6FF;
+        border-style: dashed;
+        border-radius: 14%;
+        padding: 0.3rem;
+    }
 
     .Navigation
     {
         height: 20vh;
-        top: 25vh;
+        top: 32vh;
     }
 
     #MenuBtn
     {
         height: 5vh;
         width: 5vw;
+    }
+
+    .material-symbols-outlined 
+    {
+        font-size: 4vh; 
     }
 }
 
