@@ -1,90 +1,26 @@
-/* Styling specifically for the homepage */
-#HomeTitle
+/* GoogleFont variable font for menu icon*/
+.material-symbols-outlined
 {
-    position: sticky;
-    top: 2vh;
-}
-
-#HomeImg
-{
-    margin: 10px;
-    max-height: max-content;
-    min-height: min-content;
-    height: auto;
-    width: 50rem;
-    max-width: 100%;
-}
-
-#Home
-{
-    height: 300vh;
-    margin: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: radial-gradient(circle at bottom, #69A1DD 1%, #416C9D 20%, #151515 60%) no-repeat;
-
-    padding: 0 50px;
-}
-
-h1
-{
+    transform: scale(3);
     color: #5bbcf4;
-    
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     font-variation-settings:
-    "wdth" 100;
-      
-    font-size: 5rem; 
-    text-align: center;
+        'FILL' 0,
+        'wght' 600,
+        'GRAD' -20,
+        'opsz' 48
 }
 
-body
+/* Colour change of the icon when hovering over button */
+#MenuBtn:hover .material-symbols-outlined
 {
-    height: 94vh;
-    margin: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 2%, #151515 20%) no-repeat;
-
-    padding: 0 50px;
-}
-
-/* Styling the information about me */
-.h-card
-{
-    text-align: justify;
-    color: #fafafad5;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 70vw;
-    height: 50vh;
-    font-size: 2rem;
-    flex-direction: row-reverse;
-
-    padding-inline: 1rem;
-}
-
-.ContactInfo
-{
-    margin-left: 2rem;
+    color: #151515;
 }
 
 /* Navigation */
 #MenuBtn
 {
-    height: 8vh;
+    height: 10vh;
     width: 8vw;
-    padding: 0 8px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,35 +43,25 @@ body
     border-radius: 50%;
 }
 
-/* Colour change of the icon when hovering over button */
-#MenuBtn:hover .material-symbols-outlined
-{
-    color: #151515;
-}
-
 .Navigation
 {
-   display: flex;
-   height: 10vh;
-   width: 90%; 
-   justify-content: flex-end;
-   align-items: center;
-   
-   position: sticky;
-   top: 15vh;
-
-   transition: all 3s;
+    display: flex;
+    height: 10vh;
+    width: 80%;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 3s;
 }
 
 .NavBar
 {
+    display: flex;
     visibility: visible;
     position: absolute;
-    width: 85%;
+    width: 70%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-inline: 20px;
 }
 
 .NavBar.visible
@@ -147,10 +73,12 @@ body
 {
     text-align: center;
     display: inline-block;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .NavBar ul li a
-{    
+{
     padding: 1rem 2rem;
     font-size: 2rem;
     text-decoration: none;
@@ -176,40 +104,71 @@ body
     font-size: 2rem;
 }
 
-/* GoogleFont variable font for menu icon*/
-.material-symbols-outlined 
+.NavBar li.ActivePage:hover
 {
-    font-size: 6.8vh; 
-    color: #5bbcf4;
-
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 600,
-  'GRAD' -20,
-  'opsz' 48
+    cursor: pointer;
+    border-style: dashed;
+    border-radius: 10rem;
+    border-color: #c245f3;
 }
 
-/* Media query for responsive design */
+/* Sub-pages drop-down list styling */
+.NavBar ul li .SubPages
+{
+    display: none;
+    position: absolute;
+    /* align dropdown below parent menu item */
+    top: 100%;
+    left: -40rem;
+    padding: 0;
+    z-index: 5;
+}
+
+.NavBar ul li:hover .SubPages
+{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    width: 65vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar ul .SubPages
+{
+    margin: 0;
+    padding: 0;
+}
+
+.SubPages li
+{
+    text-align: right;
+    justify-content: left;
+    margin: 0;
+}
+
+.SubPages li a
+{
+    display: flex;
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    color: #5bbcf4;
+    text-decoration: none;
+}
+
+.SubPages li a:hover
+{
+    cursor: pointer;
+    color: #E6A6FF;
+    border-style: dashed;
+    border-radius: 14%;
+    /* padding: 0.1 0px; */
+}
 
 /* Mobile deivces in portrait mode */
 @media (max-width: 750px) and (orientation: portrait)
 {
-    #HomeTitle
-    {
-        font-size: 3rem;
-        margin: 10px;
-    }
-
-    #HomeImg
-    {
-        margin: 5px;
-        padding: 0;
-    }
-
-    body{
-        padding: 0;
-    }
-
     .NavBar
     {
         height: auto;
@@ -220,9 +179,12 @@ body
     .NavBar ul
     {
         text-align: left;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         padding: 0;
         margin: 0;
+        margin-top: 20rem;
     }
 
     .NavBar ul li
@@ -232,7 +194,8 @@ body
         padding: 4px;
     }
 
-    .NavBar ul li a{
+    .NavBar ul li a
+    {
         padding: 2px 0px;
         font-size: 1rem;
     }
@@ -244,7 +207,7 @@ body
         cursor: default;
         font-size: 1rem;
     }
-    
+
     .NavBar li a:hover
     {
         cursor: pointer;
@@ -262,85 +225,75 @@ body
 
     #MenuBtn
     {
-        height: 5vh;
-        width: 5vw;
+        width: 15vw;
     }
 
-    .material-symbols-outlined 
+    .Me .NavBar ul
     {
-        font-size: 4vh; 
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
     }
 }
 
 /* Mobile deivces in landscape mode */
 @media (max-width: 750px) and (orientation: landscape)
 {
-    #HomeTitle
-    {
-        font-size: 3rem;
-        margin: 10px;
-        top: 1vh;
-    }
-
-    #HomeImg
-    {
-        margin: 5px;
-        padding: 0;
-    }
-
-    body{
-        padding: 0;
-    }
-
     .NavBar
     {
-        height: 15vh;
-        right: 25px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin: 0rem 1rem;
+        height: auto;
+        margin-inline: 10px;
+        padding-top: 1rem;
     }
 
     .NavBar ul
     {
-        height: 15vh;
-        display: flex;
         text-align: left;
-        justify-content: center;
-        gap: 1rem;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         padding: 0;
         margin: 0;
+        margin-top: 18rem;
     }
 
     .NavBar ul li
     {
         text-align: center;
         display: block;
-        padding: 0px;
-        margin: 0.5rem 0rem;
+        padding: 4px;
     }
 
-    .NavBar ul li a{
-        padding: 0;
+    .NavBar ul li a
+    {
+        padding: 2px 0px;
         font-size: 1rem;
     }
 
     .NavBar li.ActivePage
     {
-        display: flex;
         background-color: #FDD6FF;
-        padding: 0 0.3rem;
+        padding: 0 0.5rem;
         cursor: default;
         font-size: 1rem;
-        margin: 0;
-        height: 8vh;
-        justify-content: center;
-        align-items: center;
     }
-    
+
     .NavBar li a:hover
     {
         cursor: pointer;
@@ -352,43 +305,43 @@ body
 
     .Navigation
     {
-        height: 15vh;
-        width: 80vw;
-        top: 20vh;
+        height: 20vh;
+        top: 32vh;
     }
 
     #MenuBtn
     {
-        height: 5vh;
-        width: 5vw;
+        width: 10vw;
+        height: 20vh;
     }
 
-    .material-symbols-outlined 
+    .Me .NavBar ul
     {
-        font-size: 4vh; 
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
     }
 }
 
 /* Tablet deivces and larger screen mobile devices in landscape */
 @media (min-width: 750px) and (max-width: 1024.98px) and (orientation: portrait)
 {
-    #HomeTitle
-    {
-        font-size: 3rem;
-        margin: 10px;
-        top: 6vh;
-    }
-
-    #HomeImg
-    {
-        margin: 5px;
-        padding: 0;
-    }
-
-    body{
-        padding: 0;
-    }
-
     .NavBar
     {
         height: 30vh;
@@ -412,7 +365,8 @@ body
         align-items: center;
         padding: 0;
         margin: 0;
-        margin-top: 8rem;
+        margin-top: 20rem;
+        margin-right: 10rem;
     }
 
     .NavBar ul li
@@ -423,7 +377,8 @@ body
         margin: 0.5rem 0rem;
     }
 
-    .NavBar ul li a{
+    .NavBar ul li a
+    {
         padding: 0;
         font-size: 2rem;
     }
@@ -440,7 +395,7 @@ body
         justify-content: center;
         align-items: center;
     }
-    
+
     .NavBar li a:hover
     {
         cursor: pointer;
@@ -463,8 +418,42 @@ body
         width: 5vw;
     }
 
-    .material-symbols-outlined 
+    .material-symbols-outlined
     {
-        font-size: 4vh; 
+        font-size: 4vh;
+    }
+
+    #MenuBtn
+    {
+        height: 10vh;
+        width: 12vw;
+    }
+
+    .SubPages
+    {
+        display: flex;
+    }
+
+    .Me .NavBar ul
+    {
+        margin-top: 2rem;
+    }
+
+    .Me .NavBar ul li
+    {
+        text-align: center;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 2vh;
+    }
+
+    .Me .NavBar ul li a
+    {
+        font-size: 1.2rem;
+    }
+
+    .material-symbols-outlined
+    {
+        transform: scale(2);
     }
 }
