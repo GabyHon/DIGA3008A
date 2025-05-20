@@ -58,6 +58,27 @@ body
     padding: 0 50px;
 }
 
+/* Styling the information about me */
+.h-card
+{
+    text-align: justify;
+    color: #fafafad5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+    font-size: 2rem;
+    flex-direction: row-reverse;
+
+    padding-inline: 1rem;
+}
+
+.ContactInfo
+{
+    margin-left: 2rem;
+}
+
 /* Navigation */
 .MenuCheckbox
 {

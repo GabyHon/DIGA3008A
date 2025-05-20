@@ -1,15 +1,10 @@
 body
 {
-    height: 94vh;
-    margin: 2rem;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 30%) no-repeat;
-
-    padding: 0 50px;
 }
 
 h1

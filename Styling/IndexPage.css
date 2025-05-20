@@ -1,15 +1,11 @@
 body
 {
-    height: 94vh;
-    margin: 2rem;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 30%) no-repeat;
-
-    padding: 0 50px;
+    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 22%) no-repeat;
+    overflow: hidden;
 }
 
 h1
@@ -200,26 +196,6 @@ h1
     border-style: dashed;
     border-radius: 14%;
     /* padding: 0.1 0px; */
-}
-
-.h-card
-{
-    text-align: justify;
-    color: #fafafad5;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 70vw;
-    height: 50vh;
-    font-size: 2rem;
-    flex-direction: row-reverse;
-
-    padding-inline: 1rem;
-}
-
-.ContactInfo
-{
-    margin-left: 2rem;
 }
 
 .Images
