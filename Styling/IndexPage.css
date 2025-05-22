@@ -37,6 +37,7 @@ body
     border-radius: 50%;
     background: radial-gradient(circle at left, #69A1DD 20%, #416C9D 40%, #151515 80%) no-repeat; /*or the same background if needed*/
     z-index: 2;
+
 }
 
 .CircleIndicators
@@ -62,8 +63,15 @@ body
     pointer-events: auto; /* restore interactivity */
 }
 
-.Circle.active {
+.Circle.active 
+{
     background: #E6A6FF; /* Fill when active */
+}
+
+.Circle:hover, .RotatingInnerCircle:hover
+{
+    box-shadow: 0px 0px 10px #E6A6FF; /* Glowing effect */
+    transform: scale(1.2); /* Slightly enlarge for emphasis */
 }
 
 
@@ -84,12 +92,14 @@ body
     align-items: right;
 }
 
-.Preview {
+.PreviewBlogs, .PreviewDesigns, .PreviewEssays, .PreviewPortfolio
+ {
     text-align: center;
     padding: 20px;
     background: #151515;
     color: #FDD6FF;
     border-radius: 10px;
+    font-size: 1.5rem;
 }
 
 h1

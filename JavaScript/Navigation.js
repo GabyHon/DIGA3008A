@@ -3,14 +3,28 @@ document.getElementById("MenuBtn").addEventListener("click", function () {
     document.querySelector(".NavBar").classList.toggle("visible");
 });
 
-// Blog data
-const blogData = {
-    Blog1: { title: "Blog 1 Title", description: "Preview of Blog 1..." },
-    Blog2: { title: "Blog 2 Title", description: "Preview of Blog 2..." },
-    Blog3: { title: "Blog 3 Title", description: "Preview of Blog 3..." },
-    Blog4: { title: "Blog 4 Title", description: "Preview of Blog 4..." },
-    Blog5: { title: "Blog 5 Title", description: "Preview of Blog 5..." },
-};
+// Fetching the data from the .json files
+let fetchedData = {}; // Global variable to store JSON data
+
+function fetchData(file) {
+    fetch(file)
+        .then(response => response.json())
+        .then(data => {
+            fetchedData = data; // Store data globally
+            updatePreview(data);
+        })
+        .catch(error => console.error("Error loading data:", error));
+}
+
+// Load different JSON files depending on the page type
+const pageType = document.body.getAttribute("data-page"); // Detect which page we're on
+if (pageType === "portfolio") {
+    fetchData("portfolio.json");
+} else if (pageType === "essays") {
+    fetchData("essays.json");
+} else {
+    fetchData("../BlogPages/BlogsPreview.json"); // Default to blogs if no page type is specified
+}
 
 // DOM elements
 const dragCircle = document.getElementById("RotatingCircle");
@@ -53,9 +67,9 @@ document.addEventListener("mousemove", (e) => {
     const selected = indicators[normalizedIndex];
     const target = selected.getAttribute("data-target");
 
-    if (blogData[target]) {
-        blogTitle.textContent = blogData[target].title;
-        blogDesc.textContent = blogData[target].description;
+    if (fetchedData[target]) { // Use fetched JSON data
+        blogTitle.textContent = fetchedData[target].title;
+        blogDesc.textContent = fetchedData[target].description;
     }
 
     indicators.forEach((circle) => {
@@ -65,7 +79,6 @@ document.addEventListener("mousemove", (e) => {
     if (selected) {
         selected.classList.add("active"); // Apply fill to the active one
     }
-
 });
 
 document.addEventListener("mouseup", () => {
@@ -80,17 +93,21 @@ indicators.forEach((circle, i) => {
 
         const target = circle.getAttribute("data-target");
 
-        if (blogData[target]) {
-            blogTitle.textContent = blogData[target].title;
-            blogDesc.textContent = blogData[target].description;
+        if (fetchedData[target]) { // Use fetched JSON data
+            blogTitle.textContent = fetchedData[target].title;
+            blogDesc.textContent = fetchedData[target].description;
         }
 
         const rotationPerDot = 360 / indicators.length;
         const targetAngle = i * rotationPerDot;
 
-        // Apply smooth transition for rotation
+        // Apply transition for smooth rotation
         dragCircle.style.transition = "transform 0.6s ease-in-out";
         dragCircle.style.transform = `rotate(${targetAngle}deg)`;
+
+        // **Reset dragging angle so it starts smoothly**
+        currentRotation = targetAngle;
+        startAngle = targetAngle;
 
         // Remove transition after movement to keep dragging instant
         setTimeout(() => {

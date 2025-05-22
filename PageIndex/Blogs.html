@@ -7,11 +7,11 @@
     <meta author="Gabriella Hon">
     <meta name="description"
         content="The blog homepage which contains the links to the separate pages of weekly blog posts.">
-    <meta name="keywords" content="Blog Homepage, Webpage, DIGA3008, Interactive Media, HTML, CSS">
+    <meta name="keywords" content="Blog Homepage, Webpage, DIGA3008, Interactive Media, HTML, CSS, JS">
     <title>Blog Homepage - Gaby</title>
     <link rel="GoogleFont icon" type="image/png" href="../Images/BluePlanetIcon.png" />
     <link rel="stylesheet" href="../Styling/NavStyling.css">
-<link rel="stylesheet" href="../Styling/IndexPage.css">
+    <link rel="stylesheet" href="../Styling/IndexPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,7 +19,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=planet" />
-    <script src="../JavaScript/NavBar.js" defer></script>
+    <script src="../JavaScript/Navigation.js" defer></script>
 </head>
 
 <body>
@@ -50,7 +50,8 @@
                         <li><a href="../index.html">Homepage</a></li>
                         <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
                         <li class="ActivePage">
-                            Blogs
+                            <!-- HTML Unicode for black down-pointing triangle -->
+                            Blogs <span class="Arrow">&#9660;</span> 
                             <ul class="SubPages">
                                 <li><a href="../BlogPages/Blog1.html">Blog 1</a></li>
                                 <li><a href="../BlogPages/Blog2.html">Blog 2</a></li>
@@ -66,9 +67,10 @@
             </div>
 
             <!-- Blog preview -->
-            <div class="Preview">
+            <div class="PreviewBlogs">
                 <h2 id="BlogTitle">Blog Title</h2>
-                <p id="BlogDescription">Select a blog option to see a preview.</p>
+                <p id="BlogDescription">Select a circle or drag the glowing planet on the left to see a preview of the
+                    blogs.</p>
             </div>
 
         </div>

@@ -167,6 +167,16 @@
     /* padding: 0.1 0px; */
 }
 
+/* Styling for the drop-down arrow */
+.Arrow
+{
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 500px;
+    position: relative;
+    top: -2px;
+}
+
 /* Mobile deivces in portrait mode */
 @media (max-width: 750px) and (orientation: portrait)
 {

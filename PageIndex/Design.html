@@ -8,7 +8,7 @@
     <meta name="description"
         content="The design homepage which contains the links to the separate pages of the design section.">
     <meta name="keywords"
-        content="Design Homepage, Webpage, Wireframes, Reference material, DIGA3008, Interactive Media, HTML, CSS">
+        content="Design Homepage, Webpage, Wireframes, Reference material, Style Process, IxD Process, DIGA3008, Interactive Media, HTML, CSS, JS">
     <title>Design Homepage - Gaby</title>
     <link rel="GoogleFont icon" type="image/png" href="../Images/BluePlanetIcon.png" />
     <link rel="stylesheet" href="../Styling/NavStyling.css">
@@ -20,32 +20,54 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=planet" />
-    <script src="../JavaScript/NavBar.js" defer></script>
+    <script src="../JavaScript/Navigation.js" defer></script>
 </head>
 
 <body>
-    <h1>Design Homepage</h1>
-    <div class="Navigation">
-        <div class="IndexPg" id="MenuBtn">
-            <span class="material-symbols-outlined">
-                planet
-            </span>
+    <div class="GridContainer">
+        <!-- Containter for dragging the semi-circle -->
+        <div class="DragCircle">
+            <div class="RotatingInnerCircle" id="RotatingCircle"></div>
         </div>
-        <nav class="NavBar">
-            <ul>
-                <li><a href="../index.html">Homepage</a></li>
-                <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
-                <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
-                <li class="ActivePage">
-                    Design
-                    <ul class="SubPages">
-                        <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
-                        <li><a href="../DesignPages/StyleProcess.html">Style Process</a></li>
+        <div class="CircleIndicators">
+            <div class="Circle" data-target="IxDProcess"></div>
+            <div class="Circle" data-target="StyleProcess"></div>
+        </div>
+
+        <!-- Container for the title, nav bar, and preview of the design pages -->
+        <div class="Content">
+            <h1>Design Homepage</h1>
+            <div class="Navigation">
+                <div class="IndexPg" id="MenuBtn">
+                    <span class="material-symbols-outlined">
+                        planet
+                    </span>
+                </div>
+                <nav class="NavBar">
+                    <ul>
+                        <li><a href="../index.html">Homepage</a></li>
+                        <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
+                        <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
+                        <li class="ActivePage">
+                            <!-- HTML Unicode for black down-pointing triangle -->
+                            Design <span class="Arrow">&#9660;</span>
+                            <ul class="SubPages">
+                                <li><a href="../DesignPages/IxDProcess.html">IxD Process</a></li>
+                                <li><a href="../DesignPages/StyleProcess.html">Style Process</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../PageIndex/Essay.html">Essays</a></li>
                     </ul>
-                </li>
-                <li><a href="../PageIndex/Essay.html">Essays</a></li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+
+            <!-- Design preview -->
+            <div class="PreviewDesigns">
+                <h2 id="BlogTitle">Design Title</h2>
+                <p id="BlogDescription">Select a circle or drag the glowing planet on the left to see a preview of the
+                    designs.</p>
+            </div>
+        </div>
     </div>
 </body>
 

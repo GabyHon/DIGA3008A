@@ -1,0 +1,22 @@
+{
+    "Blog1": {
+        "title": "(1) A step into 'As We May Think' at 65 and my goals for this course",
+        "description": "Preview of Blog 1..."
+    },
+    "Blog2": {
+        "title": "(2) 'You Say You Want a Revolution? Hypertext and the Laws of Media' and how it speaks to the internet today",
+        "description": "Preview of Blog 2..."
+    },
+    "Blog3": {
+        "title": "(3) User alignment and experience for my site",
+        "description": "Preview of Blog 3..."
+    },
+    "Blog4": {
+        "title": "(4) First wireframes for my design",
+        "description": "Preview of Blog 4..."
+    },
+    "Blog5": {
+        "title": "(5) Example websites for an analysis on UX and UI",
+        "description": "Preview of Blog 5..."
+    }
+}
