@@ -228,24 +228,6 @@
         width: 15vw;
     }
 
-    .Me .NavBar ul
-    {
-        margin-top: 2rem;
-    }
-
-    .Me .NavBar ul li
-    {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        height: 2vh;
-    }
-
-    .Me .NavBar ul li a
-    {
-        font-size: 1.2rem;
-    }
-
     .material-symbols-outlined
     {
         transform: scale(2);
@@ -313,24 +295,6 @@
     {
         width: 10vw;
         height: 20vh;
-    }
-
-    .Me .NavBar ul
-    {
-        margin-top: 2rem;
-    }
-
-    .Me .NavBar ul li
-    {
-        text-align: center;
-        display: flex;
-        flex-direction: row-reverse;
-        height: 2vh;
-    }
-
-    .Me .NavBar ul li a
-    {
-        font-size: 1.2rem;
     }
 
     .material-symbols-outlined
@@ -432,24 +396,6 @@
     .SubPages
     {
         display: flex;
-    }
-
-    .Me .NavBar ul
-    {
-        margin-top: 2rem;
-    }
-
-    .Me .NavBar ul li
-    {
-        text-align: center;
-        display: flex;
-        flex-direction: row-reverse;
-        height: 2vh;
-    }
-
-    .Me .NavBar ul li a
-    {
-        font-size: 1.2rem;
     }
 
     .material-symbols-outlined
