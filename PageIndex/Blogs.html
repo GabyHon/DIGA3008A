@@ -11,7 +11,7 @@
     <title>Blog Homepage - Gaby</title>
     <link rel="GoogleFont icon" type="image/png" href="../Images/BluePlanetIcon.png" />
     <link rel="stylesheet" href="../Styling/NavStyling.css">
-    <link rel="stylesheet" href="../Styling/IndexPage.css">
+<link rel="stylesheet" href="../Styling/IndexPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,31 +23,55 @@
 </head>
 
 <body>
-    <h1>Blogs Homepage</h1>
-    <div class="Navigation">
-        <div class="IndexPg" id="MenuBtn">
-            <span class="material-symbols-outlined">
-                planet
-            </span>
+    <div class="GridContainer">
+        <!-- Containter for dragging the semi-circle -->
+        <div class="DragCircle">
+            <div class="RotatingInnerCircle" id="RotatingCircle"></div>
         </div>
-        <nav class="NavBar">
-            <ul>
-                <li><a href="../index.html">Homepage</a></li>
-                <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
-                <li class="ActivePage">
-                    Blogs
-                    <ul class="SubPages">
-                        <li><a href="../BlogPages/Blog1.html">Blog 1</a></li>
-                        <li><a href="../BlogPages/Blog2.html">Blog 2</a></li>
-                        <li><a href="../BlogPages/Blog3.html">Blog 3</a></li>
-                        <li><a href="../BlogPages/Blog4.html">Blog 4</a></li>
-                        <li><a href="../BlogPages/Blog5.html">Blog 5</a></li>
+        <div class="CircleIndicators">
+            <div class="Circle" data-target="Blog1"></div>
+            <div class="Circle" data-target="Blog2"></div>
+            <div class="Circle" data-target="Blog3"></div>
+            <div class="Circle" data-target="Blog4"></div>
+            <div class="Circle" data-target="Blog5"></div>
+        </div>
+
+        <!-- Container for the title, nav bar, and preview of the blogs -->
+        <div class="Content">
+            <h1>Blogs Homepage</h1>
+            <div class="Navigation">
+                <div class="IndexPg" id="MenuBtn">
+                    <span class="material-symbols-outlined">
+                        planet
+                    </span>
+                </div>
+                <nav class="NavBar">
+                    <ul>
+                        <li><a href="../index.html">Homepage</a></li>
+                        <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
+                        <li class="ActivePage">
+                            Blogs
+                            <ul class="SubPages">
+                                <li><a href="../BlogPages/Blog1.html">Blog 1</a></li>
+                                <li><a href="../BlogPages/Blog2.html">Blog 2</a></li>
+                                <li><a href="../BlogPages/Blog3.html">Blog 3</a></li>
+                                <li><a href="../BlogPages/Blog4.html">Blog 4</a></li>
+                                <li><a href="../BlogPages/Blog5.html">Blog 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../PageIndex/Design.html">Design</a></li>
+                        <li><a href="../PageIndex/Essay.html">Essays</a></li>
                     </ul>
-                </li>
-                <li><a href="../PageIndex/Design.html">Design</a></li>
-                <li><a href="../PageIndex/Essay.html">Essays</a></li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+
+            <!-- Blog preview -->
+            <div class="Preview">
+                <h2 id="BlogTitle">Blog Title</h2>
+                <p id="BlogDescription">Select a blog option to see a preview.</p>
+            </div>
+
+        </div>
     </div>
 </body>
 

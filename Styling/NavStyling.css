@@ -19,7 +19,7 @@
 /* Navigation */
 #MenuBtn
 {
-    height: 10vh;
+    height: 12vh;
     width: 8vw;
     display: flex;
     justify-content: center;
@@ -47,21 +47,22 @@
 {
     display: flex;
     height: 10vh;
-    width: 80%;
+    width: 95%;
     justify-content: flex-end;
     align-items: center;
     transition: all 3s;
+    user-select: none;
 }
 
 .NavBar
 {
+    position: absolute;
     display: flex;
     visibility: visible;
-    position: absolute;
-    width: 70%;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    width: 80%;
 }
 
 .NavBar.visible

@@ -1,29 +1,106 @@
 body
 {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 22%) no-repeat;
     overflow: hidden;
+}
+
+.GridContainer
+{
+    display: grid;
+    grid-template-columns: 0.55fr 2fr;
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+}
+
+.DragCircle
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #69A1DD, #416C9D);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    overflow: visible;
+}
+
+/* Rotates inside the drag circle */
+.RotatingInnerCircle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at left, #69A1DD 20%, #416C9D 40%, #151515 80%) no-repeat; /*or the same background if needed*/
+    z-index: 2;
+}
+
+.CircleIndicators
+{
+    position: absolute;
+    width: 19vw;
+    height: 95vh;
+    margin: auto;
+    z-index: 3;
+    pointer-events: none; /* make sure they don't block dragging */
+}
+
+.Circle
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E6A6FF;
+    cursor: pointer;
+    transition: background 0.2s;
+    pointer-events: auto; /* restore interactivity */
+}
+
+/* Position the circles evenly around the border */
+.Circle:nth-child(1) { top: 12%; left: 50%; transform: translate(-50%, -50%); }
+.Circle:nth-child(2) { top: 30%; left: 80%; transform: translate(-50%, -50%); }
+.Circle:nth-child(3) { top: 50%; left: 90%; transform: translate(-50%, -50%); }
+.Circle:nth-child(4) { top: 70%; left: 80%; transform: translate(-50%, -50%); }
+.Circle:nth-child(5) { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+
+
+.Content
+{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+
+.Preview {
+    text-align: center;
+    padding: 20px;
+    background: #151515;
+    color: #FDD6FF;
+    border-radius: 10px;
 }
 
 h1
 {
     color: #5bbcf4;
-
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-
+    font-variation-settings:"wdth" 100;
     font-size: 5rem;
-    text-align: center;
-    justify-content: center;
-
     margin: 1rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    user-select: none;
 }
 
 .Images
@@ -83,13 +160,6 @@ h1
     {
         font-size: 2rem;
     }
-
-    .Me body
-    {
-        padding: 0;
-        margin: 0.5rem;
-        height: 40vh;
-    }
     
     .h-card
     {
@@ -113,13 +183,6 @@ h1
     {
         font-size: 2rem;
     }
-
-    .Me body
-    {
-        padding: 0;
-        margin: 0.5rem;
-        height: 30vh;
-    }
     
     .h-card
     {
@@ -137,13 +200,6 @@ h1
         padding: 0;
         margin: 0.5rem;
         height: 102vh;
-    }
-
-    .Me body
-    {
-        padding: 0;
-        margin: 0.5rem;
-        height: 25vh;
     }
     
     .h-card
