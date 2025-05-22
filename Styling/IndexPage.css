@@ -26,6 +26,7 @@ body
     align-items: center;
     pointer-events: auto;
     overflow: visible;
+    cursor: pointer;
 }
 
 /* Rotates inside the drag circle */
@@ -54,11 +55,17 @@ body
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #E6A6FF;
+    border: 3px dotted #E6A6FF; /* Default dotted outline */
+    background: transparent; /* No fill */
     cursor: pointer;
     transition: background 0.2s;
     pointer-events: auto; /* restore interactivity */
 }
+
+.Circle.active {
+    background: #E6A6FF; /* Fill when active */
+}
+
 
 /* Position the circles evenly around the border */
 .Circle:nth-child(1) { top: 12%; left: 50%; transform: translate(-50%, -50%); }

@@ -58,9 +58,14 @@ document.addEventListener("mousemove", (e) => {
         blogDesc.textContent = blogData[target].description;
     }
 
-    indicators.forEach((circle, i) => {
-        circle.style.background = i === normalizedIndex ? "#69A1DD" : "#E6A6FF";
+    indicators.forEach((circle) => {
+        circle.classList.remove("active"); // Remove fill from all circles
     });
+
+    if (selected) {
+        selected.classList.add("active"); // Apply fill to the active one
+    }
+
 });
 
 document.addEventListener("mouseup", () => {
@@ -70,18 +75,26 @@ document.addEventListener("mouseup", () => {
 // Allow clicking circles to update preview and rotation
 indicators.forEach((circle, i) => {
     circle.addEventListener("click", () => {
+        indicators.forEach((c) => c.classList.remove("active")); // Reset all circles
+        circle.classList.add("active"); // Fill the clicked one
+
         const target = circle.getAttribute("data-target");
+
         if (blogData[target]) {
             blogTitle.textContent = blogData[target].title;
             blogDesc.textContent = blogData[target].description;
         }
 
-        indicators.forEach((c) => (c.style.background = "#E6A6FF"));
-        circle.style.background = "#69A1DD";
-
         const rotationPerDot = 360 / indicators.length;
         const targetAngle = i * rotationPerDot;
-        currentRotation = targetAngle;
-        dragCircle.style.transform = `rotate(${currentRotation}deg)`;
+
+        // Apply smooth transition for rotation
+        dragCircle.style.transition = "transform 0.6s ease-in-out";
+        dragCircle.style.transform = `rotate(${targetAngle}deg)`;
+
+        // Remove transition after movement to keep dragging instant
+        setTimeout(() => {
+            dragCircle.style.transition = "none";
+        }, 600);
     });
 });
