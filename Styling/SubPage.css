@@ -16,7 +16,7 @@
     padding-left: 10vw;
     padding-right: 0.5vw;
     overflow-y: scroll;
-    color: #fafafad5;
+    color: #fafafa;
 }
 
 /* Width of the scrollbar */
@@ -27,6 +27,7 @@
 /* Track (background) */
 .h-entry::-webkit-scrollbar-track {
     background: #151515;
+    border-radius: 10px;
 }
 
 /* Handle (the part you drag) */
@@ -85,8 +86,8 @@ a.Reference:hover, a.Reference:focus
 
 .ColImages
 {
-    height: 25vh;
-    width: 15vw;
+    height: 30vh;
+    width: 20vw;
 }
 
 .FontImages
