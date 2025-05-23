@@ -1,0 +1,12 @@
+{
+    "Game1": {
+        "title": "(1) Gravity Flip Platformer Prototype",
+        "description": "Game Design prototype 1 gravity mechanic where the player is required to travel around the environmentwhile avoid colliding with spikes. There are a few coloured items that the player can walk into to change the colour of the character.",
+        "image": "../PortfolioPages/PortfolioImages/Gravity1.png"
+    },
+    "Game2": {
+        "title": "(2) Camera Prototype",
+        "description": "Game Design prototype 2 camera mechanic where the player is required to move around the environment using the mouse to change the camera view.",
+        "image": "../PortfolioPages/PortfolioImages/CamMech1.png"
+    }
+}
