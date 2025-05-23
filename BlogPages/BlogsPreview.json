@@ -1,42 +1,52 @@
 {
     "Blog1": {
         "title": "(1) A step into 'As We May Think' at 65 and my goals for this course",
-        "description": "Preview of Blog 1..."
+        "description": "This week I came across a reading which spoke about the published work As We May Think by Vannevar Bush. Simon Harper mentions that the condition with which the human brain operates well in is where there is an association between information [1]. This speaks directly to the idea proposed by Bush where people can link information across different articles and therefore lead other readers in following the thought process and linking of another person [2]...",
+        "link": "../BlogPages/Blog1.html"
     },
     "Blog2": {
         "title": "(2) 'You Say You Want a Revolution? Hypertext and the Laws of Media' and how it speaks to the internet today",
-        "description": "Preview of Blog 2..."
+        "description": "Information in the post-modern world is often catered to each individual user. The user can follow hypertext in their own interest and at their own pace...",
+        "link": "../BlogPages/Blog2.html"
     },
     "Blog3": {
         "title": "(3) User alignment, user experience, and development for my site",
-        "description": "Preview of Blog 3..."
+        "description": "I have decided to focus my user alignment on learning about what I have produced and what I have an interest in...",
+        "link": "../BlogPages/Blog3.html"
     },
     "Blog4": {
         "title": "(4) Reflection on my frist wireframes",
-        "description": "Preview of Blog 4..."
+        "description": "...My original wireframes are designed around an exploration theme, so I want the interface elements of my website to include mostly navigational and informational components...",
+        "link": "../BlogPages/Blog4.html"
     },
     "Blog5": {
         "title": "(5) Example websites for analysis on UX and UI essay",
-        "description": "Preview of Blog 5..."
+        "description": "...The spacing between book images in different pages are different...",
+        "link": "../BlogPages/Blog5.html"
     },
     "Blog6": {
         "title": "(6) Internet, Society, and Design Justice",
-        "description": "Preview of Blog 6..."
+        "description": "...the educational disruption and the lack of facilities and access to the internet which was needed by students to continue with their educational needs...",
+        "link": "../BlogPages/Blog6.html"
     },
     "Blog7": {
         "title": "(7) Close reading on The Digital Hegemonies: The Localness of Search Engine Results",
-        "description": "Preview of Blog 7..."
+        "description": "...it was found that there was a correlation between locally produced content by wealthier countries and Google searches...",
+        "link": "../BlogPages/Blog7.html"
     },
     "Blog8": {
         "title": "(8) Reflective reading on Digital inequalities and why they matter",
-        "description": "Preview of Blog 8..."
+        "description": "...digital inequalities can be seen in everyday life where many groups of people are not able to access, purposefully use, and gain benefits from using the internet...",
+        "link": "../BlogPages/Blog8.html"
     },
     "Blog9": {
         "title": "(9) Decolonialism in Code and my development with JavaScript",
-        "description": "Preview of Blog 9..."
+        "description": "One aspect of decolonial coding practice is being aware of the accessibility and representation of users. Are we assuming English as the default language?",
+        "link": "../BlogPages/Blog9.html"
     },
     "Blog10": {
         "title": "(10) Can we build an ethical internet?",
-        "description": "Preview of Blog 10..."
+        "description": "There should be a balance between innovation of data-driven achievements with privacy protection of individuals, businesses, and society as a whole...",
+        "link": "../BlogPages/Blog10.html"
     }
 }

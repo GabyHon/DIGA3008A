@@ -68,10 +68,12 @@ function fetchData(file) {
 
 // Load different JSON files depending on the page type
 const pageType = document.body.getAttribute("data-page"); // Detect which page we're on
-if (pageType === "portfolio") {
+if (pageType === "Portfolio") {
     fetchData("portfolio.json");
-} else if (pageType === "essays") {
-    fetchData("essays.json");
+} else if (pageType === "Essays") {
+    fetchData("../EssayPages/EssayPreview.json");
+} else if (pageType === "Designs") {
+    fetchData("../DesignPages/DesignPreview.json");
 } else {
     fetchData("../BlogPages/BlogsPreview.json"); // Default to blogs if no page type is specified
 }
@@ -79,8 +81,9 @@ if (pageType === "portfolio") {
 // DOM elements
 const dragCircle = document.getElementById("RotatingCircle");
 const indicators = document.querySelectorAll(".Circle");
-const blogTitle = document.getElementById("BlogTitle");
-const blogDesc = document.getElementById("BlogDescription");
+const Title = document.getElementById("Title");
+const Desc = document.getElementById("Description");
+const DynamicButton = document.getElementById("DynamicButton");
 
 let isDragging = false;
 let startAngle = 0;
@@ -118,9 +121,12 @@ document.addEventListener("mousemove", (e) => {
     const target = selected.getAttribute("data-target");
 
     if (fetchedData[target]) { // Use fetched JSON data
-        blogTitle.textContent = fetchedData[target].title;
-        blogDesc.textContent = fetchedData[target].description;
+        Title.textContent = fetchedData[target].title;
+        Desc.textContent = fetchedData[target].description;
+        DynamicButton.href = fetchedData[target].link;
     }
+
+    DynamicButton.style.display = "inline-block";
 
     indicators.forEach((circle) => {
         circle.classList.remove("active"); // Remove fill from all circles
@@ -140,12 +146,14 @@ indicators.forEach((circle, i) => {
     circle.addEventListener("click", () => {
         indicators.forEach((c) => c.classList.remove("active")); // Reset all circles
         circle.classList.add("active"); // Fill the clicked one
+        DynamicButton.style.display = "inline-block";
 
         const target = circle.getAttribute("data-target");
 
         if (fetchedData[target]) { // Use fetched JSON data
-            blogTitle.textContent = fetchedData[target].title;
-            blogDesc.textContent = fetchedData[target].description;
+            Title.textContent = fetchedData[target].title;
+            Desc.textContent = fetchedData[target].description;
+            DynamicButton.href = fetchedData[target].link;
         }
 
         const rotationPerDot = 360 / indicators.length;

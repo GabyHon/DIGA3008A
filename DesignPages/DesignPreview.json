@@ -1,0 +1,12 @@
+{
+    "IxDProcess": {
+        "title": "(1) IxD Process",
+        "description": "The overall goal that I have for my website is to create a minimalistic style while showcasing a few advanced technical skills on the website...",
+        "link": "../DesignPages/IxDProcess.html"
+    },
+    "StyleProcess": {
+        "title": "(2) Style Process",
+        "description": "I chose contrasting colours for my navigation menu button when the button is on the page and then when the button is hovered on...",
+        "link": "../DesignPages/StyleProcess.html"
+    }
+}

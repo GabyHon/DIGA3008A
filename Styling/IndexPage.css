@@ -153,6 +153,31 @@ h1
     margin-top: 2rem;
 }
 
+/* Styling for links to sub-pages */
+a.Button:link
+{
+    color: #5bbcf4;
+    border: dotted;
+    text-decoration: none;
+    padding: 3px;
+}
+
+a.Button:visited
+{
+    color: #E6A6FF;
+}
+
+a.Button:hover, a.Button:focus
+{
+    color: #151515;
+    background-color: #E6A6FF;
+    border: none;
+}
+
+#DynamicButton {
+    display: none;
+}
+
 /* Media query for responsive design */
 
 /* Mobile deivces in portrait mode */
