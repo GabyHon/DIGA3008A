@@ -1,10 +1,45 @@
-body
+.Writings
 {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(circle at left, #69A1DD 0.5%, #416C9D 10%, #151515 30%) no-repeat;
+    background: linear-gradient(to right, #69A1DD 0.5%, #416C9D 10%, #151515 15%) no-repeat;
+}
+
+.h-entry
+{
+    height: 100%;
+    width: 70vw;
+    font-size: 1rem;
+    margin: 0rem 1rem;
+    padding-left: 10vw;
+    padding-right: 0.5vw;
+    overflow-y: scroll;
+    color: #fafafad5;
+}
+
+/* Width of the scrollbar */
+.h-entry::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track (background) */
+.h-entry::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+/* Handle (the part you drag) */
+.h-entry::-webkit-scrollbar-thumb {
+    height: 2px;
+    background: linear-gradient(to top, #ff7eb3 10%, #416C9D 50%);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.h-entry::-webkit-scrollbar-thumb:hover {
+    background: #E6A6FF;
+    cursor: pointer;
 }
 
 h1
@@ -18,40 +53,12 @@ h1
     font-variation-settings:
     "wdth" 100;
       
-    font-size: 5rem; 
+    font-size: 3rem; 
     text-align: center;
     justify-content: center;
 
     margin: 1rem 0rem 0rem 0rem;
-}
-
-/* Sub page content */
-.p-author
-{
-    color: #fafafad5;
-}
-
-.dt-published
-{
-    color: #fafafad5;
-}
-
-.h-entry
-{
-    height: 75vh;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 15rem;
-    padding-bottom: 2rem;
-    font-size: 1rem;
-}
-
-.e-content
-{
-    text-align: justify;
-    color: #fafafad5;
+    padding-left: 15vw;
 }
 
 a.Reference:link
@@ -74,71 +81,6 @@ a.Reference:hover, a.Reference:focus
 {
     height: 50vh;
     width: 50vw;
-}
-
-.Blog4
-{
-    height: 365vh;
-}
-
-.Blog4 .h-entry
-{
-    height: 100vh;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    font-size: 1rem;
-    padding: 0;
-    padding-top: 165rem;
-}
-
-.Blog5
-{
-    height: 300vh;
-}
-
-.Blog5 .h-entry
-{
-    height: 100vh;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    font-size: 1.2rem;
-    padding: 0;
-    padding-top: 120rem;
-}
-
-.IxD
-{
-    height: 190vh;
-}
-
-.IxD .e-content
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 1.2rem;
-    padding: 0;
-}
-
-.StyleProc
-{
-    height: 880vh;
-}
-
-.StyleProc .e-content
-{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    font-size: 1.2rem;
-    padding: 0;
 }
 
 .ColImages
