@@ -1,4 +1,31 @@
-// Toggle navigation menu
+document.addEventListener("DOMContentLoaded", function () {
+    const activePageItems = document.querySelectorAll(".ActivePage");
+
+    activePageItems.forEach((item) => {
+        const submenu = item.querySelector(".SubPages");
+        if (!submenu) return; // Skip if there's no submenu
+
+        let submenuTimeout;
+
+        function showSubMenu() {
+            clearTimeout(submenuTimeout);
+            submenu.style.display = "flex";
+        }
+
+        function hideSubMenu() {
+            submenuTimeout = setTimeout(() => {
+                submenu.style.display = "none";
+            }, 200); // Short delay allows user to move from parent to submenu
+        }
+
+        item.addEventListener("mouseenter", showSubMenu);
+        item.addEventListener("mouseleave", hideSubMenu);
+        submenu.addEventListener("mouseenter", showSubMenu);
+        submenu.addEventListener("mouseleave", hideSubMenu);
+    });
+});
+
+// Toggle navigation menu with the planet icon
 document.getElementById("MenuBtn").addEventListener("click", function () {
     document.querySelector(".NavBar").classList.toggle("visible");
 });

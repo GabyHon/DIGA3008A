@@ -100,6 +100,7 @@ body
     color: #FDD6FF;
     border-radius: 10px;
     font-size: 1.5rem;
+    margin-top: 35px;
 }
 
 h1
@@ -111,7 +112,7 @@ h1
     font-style: normal;
     font-variation-settings:"wdth" 100;
     font-size: 5rem;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -114,13 +114,19 @@
 }
 
 /* Sub-pages drop-down list styling */
+.NavBar ul .SubPages
+{
+    margin: 0;
+    padding: 0;
+}
+
 .NavBar ul li .SubPages
 {
     display: none;
     position: absolute;
     /* align dropdown below parent menu item */
-    top: 100%;
-    left: -40rem;
+    top: 80px;
+    left: -25rem;
     padding: 0;
     z-index: 5;
 }
@@ -131,15 +137,23 @@
     flex-direction: row;
     float: left;
     width: 65vw;
-    height: 10vh;
+    height: 8vh;
     justify-content: center;
     align-items: center;
 }
 
-.NavBar ul .SubPages
+.SubPages
 {
-    margin: 0;
-    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: row;
+    width: 65vw;
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
 .SubPages li
@@ -163,8 +177,8 @@
     cursor: pointer;
     color: #E6A6FF;
     border-style: dashed;
-    border-radius: 14%;
-    /* padding: 0.1 0px; */
+    border-radius: 15%;
+    padding: 0.8rem;
 }
 
 /* Styling for the drop-down arrow */
