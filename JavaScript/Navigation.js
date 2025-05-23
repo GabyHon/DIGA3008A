@@ -23,6 +23,29 @@ document.addEventListener("DOMContentLoaded", function () {
         submenu.addEventListener("mouseenter", showSubMenu);
         submenu.addEventListener("mouseleave", hideSubMenu);
     });
+
+    // Dynamically position .Circle elements in a semicircle
+    const container = document.querySelector(".CircleIndicators");
+    const circles = container.querySelectorAll(".Circle");
+
+    const radiusX = container.offsetWidth * 0.6; // Horizontal spread (width)
+    const radiusY = container.offsetHeight * 0.4; // Vertical spread (height)
+    const centerX = container.offsetWidth / 3;
+    const centerY = container.offsetHeight / 2 + 35;
+
+    const total = circles.length;
+    const angleStep = Math.PI / (total - 1); // Evenly spaced in 180°
+
+    circles.forEach((circle, i) => {
+        const angle = Math.PI * (i / (total - 1)); // 0 to PI (semicircle)
+
+        const x = centerX + radiusX * Math.sin(angle); // Horizontal position
+        const y = centerY - radiusY * Math.cos(angle); // Vertical position
+
+        circle.style.left = `${x}px`;
+        circle.style.top = `${y}px`;
+    });
+
 });
 
 // Toggle navigation menu with the planet icon

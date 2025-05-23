@@ -61,6 +61,7 @@ body
     cursor: pointer;
     transition: background 0.2s;
     pointer-events: auto; /* restore interactivity */
+    transform: translate(-50%, -50%);
 }
 
 .Circle.active 
@@ -71,17 +72,7 @@ body
 .Circle:hover, .RotatingInnerCircle:hover
 {
     box-shadow: 0px 0px 10px #E6A6FF; /* Glowing effect */
-    transform: scale(1.2); /* Slightly enlarge for emphasis */
 }
-
-
-/* Position the circles evenly around the border */
-.Circle:nth-child(1) { top: 12%; left: 50%; transform: translate(-50%, -50%); }
-.Circle:nth-child(2) { top: 30%; left: 80%; transform: translate(-50%, -50%); }
-.Circle:nth-child(3) { top: 50%; left: 90%; transform: translate(-50%, -50%); }
-.Circle:nth-child(4) { top: 70%; left: 80%; transform: translate(-50%, -50%); }
-.Circle:nth-child(5) { top: 90%; left: 50%; transform: translate(-50%, -50%); }
-
 
 .Content
 {

@@ -8,15 +8,35 @@
         "description": "Preview of Blog 2..."
     },
     "Blog3": {
-        "title": "(3) User alignment and experience for my site",
+        "title": "(3) User alignment, user experience, and development for my site",
         "description": "Preview of Blog 3..."
     },
     "Blog4": {
-        "title": "(4) First wireframes for my design",
+        "title": "(4) Reflection on my frist wireframes",
         "description": "Preview of Blog 4..."
     },
     "Blog5": {
-        "title": "(5) Example websites for an analysis on UX and UI",
+        "title": "(5) Example websites for analysis on UX and UI essay",
         "description": "Preview of Blog 5..."
+    },
+    "Blog6": {
+        "title": "(6) Internet, Society, and Design Justice",
+        "description": "Preview of Blog 6..."
+    },
+    "Blog7": {
+        "title": "(7) Close reading on The Digital Hegemonies: The Localness of Search Engine Results",
+        "description": "Preview of Blog 7..."
+    },
+    "Blog8": {
+        "title": "(8) Reflective reading on Digital inequalities and why they matter",
+        "description": "Preview of Blog 8..."
+    },
+    "Blog9": {
+        "title": "(9) Decolonialism in Code and my development with JavaScript",
+        "description": "Preview of Blog 9..."
+    },
+    "Blog10": {
+        "title": "(10) Can we build an ethical internet?",
+        "description": "Preview of Blog 10..."
     }
 }
