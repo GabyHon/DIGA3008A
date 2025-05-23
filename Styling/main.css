@@ -64,12 +64,12 @@ body
     text-align: justify;
     color: #fafafad5;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     width: 70vw;
-    height: 50vh;
+    height: 90vh;
     font-size: 2rem;
-    flex-direction: row-reverse;
+    flex-direction: column;
 
     padding-inline: 1rem;
 }
@@ -122,7 +122,7 @@ body
    align-items: center;
    
    position: sticky;
-   top: 15vh;
+   top: 20vh;
 
    transition: all 3s;
 }
@@ -187,6 +187,16 @@ body
   'wght' 600,
   'GRAD' -20,
   'opsz' 48
+}
+
+/* Syling for the ISS location API */
+#issLocation {
+    background-color: FAFAFA;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
 }
 
 /* Media query for responsive design */
