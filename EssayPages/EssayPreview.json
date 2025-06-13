@@ -3,5 +3,15 @@
         "title": "(1) Interaction design through UI and UX",
         "description": "The choices made by web designers and the intention behind the design influence the ethical impact that the user interface (UI) and user experience (UX) have on users...",
         "link": "../EssayPages/Essay1.html"
+    },
+    "AIActionSummit": {
+        "title": "(2) The Internet, Geopolotics, and Digital Coloniality",
+        "description": "...AI development remains deeply entwined with Western economic priorities. Direct effort to work alongside the Global South...",
+        "link": "../EssayPages/Essay2.html"
+    },
+    "FinalReflection": {
+        "title": "(3) Final Website Reflection",
+        "description": "The choices made by web designers and the intention behind the design influence the ethical impact that the user interface (UI) and user experience (UX) have on users...",
+        "link": "../EssayPages/FinalReflection.html"
     }
 }

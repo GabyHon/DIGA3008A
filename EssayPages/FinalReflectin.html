@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Gabriella Hon">
+    <meta name="description" content="This is a reflection on the final implementation of my website.">
+    <meta name="keywords"
+        content="Reflection, Final website, Folder structure, Metadata, Semantic markup, DIGA3008, Interactive Media, HTML, CSS, JS">
+    <title>Final Website Reflection</title>
+    <link rel="GoogleFont icon" type="image/png" href="../Images/BluePlanetIcon.png" />
+    <link rel="stylesheet" href="../Styling/SubPage.css">
+    <link rel="stylesheet" href="../Styling/NavStyling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wdth,wght@0,100..125,100..900;1,100..125,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=planet" />
+    <script src="../JavaScript/Navigation.js" defer></script>
+</head>
+
+<body class="Writings">
+    <h1 class="p-name">Final Website Reflection</h1>
+    <div class="Navigation">
+        <div class="IndexPg" id="MenuBtn">
+            <span class="material-symbols-outlined">
+                planet
+            </span>
+        </div>
+        <nav class="NavBar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../PageIndex/Portfolio.html">Portfolio</a></li>
+                <li><a href="../PageIndex/Blogs.html">Blogs</a></li>
+                <li><a href="../PageIndex/Design.html">Design</a></li>
+                <li><a href="../PageIndex/Essay.html">Essays</a>
+                    <ul class="SubPages">
+                        <li><a href="../EssayPages/Essay1.html">(1)</a></li>
+                        <li class="ActivePage">(2)</li>
+                        <li><a href="../EssayPages/FinalReflectin.html">(3)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <article class="h-entry">
+        <p>
+            <a class="p-author h-card">Gabriella</a>
+            <time class="dt-published" datetime="2025-05-13 21:00"> 13 June 2025</time>
+        </p>
+        <section class="e-content">
+            <h2>Introduction</h2>
+            <p>
+                Through my journey of learning more about web development and interactive media I have discovered how
+                certain decisions made by a developer can impact positively or negatively on users. I have learnt the
+                fundamentals needed to produce and implement improvements to websites and webpages that I develop.
+            </p>
+
+            <h2>Geopolitical Conflicts in AI Governance</h2>
+            <p>
+                The Élysée AI Action Summit report [1] highlights the mirrored geopolitical conflicts shown during AI
+                governance debates. The report shows that some nations advocated for open AI ecosystems and other
+                nations prioritising technological nationalism. The U.S. and European nations advocated for AI
+                regulation to focus on security while nations such as China spoke about AI as a tool for economic
+                independence. This shows the digital hegemonies where the space of AI becomes the topic of debate for
+                the influences over global digital infrastructure.
+            </p>
+
+            <h2>Folder Structure</h2>
+            <p>
+                The folder structure that I chose to implement reflects the hierarchical information structure of my
+                content such that subsequent files and folders are under their own sections. This ensures that content
+                that is specific to webpages is kept together, and no clutter or confusion happens with other webpage
+                content. I have used folders in folders to make sure that my folder structure is modular and scalable if
+                there is an increase in the content needed on a webpage. The naming convention that I used is Pascal
+                case. This naming convention is modular and scalable to make it easy to navigate to files and use for
+                referencing. There is a separation between HTML, CSS, and JavaScript where CSS and JavaScript files that
+                are used across multiple pages are under their own folders to create easy access and implementation.
+            </p>
+
+            <h2>Semantic Markup</h2>
+            <p>
+                I tried to limit the number of divisions
+            <div> that I used to ensure that someone that wanted to look at the code I implemented, or screen readers
+                would understand what each container, section, division and so forth would result in on the webpage.
+                Although the divisions that I did use were implemented for better control alongside JavaScript to
+                control containers such as my navigation and previews of the webpages. It was easier to control the
+                positioning of the divisions for my navigation circles on my index webpages compared to the button tag.
+                However, I would want to try again in the future to change the div circles into buttons as this would
+                make it clearer to screen readers or other developers what the purpose of the circles is.
+                </p>
+                <p>
+                    Articles and sections were used in webpages that contained large quantities of text such as my blog
+                    and essay sections along with the appropriate headings to ensure a logical order to my content. The
+                    &lt;alt&gt; tag was used for images and the tag &lt;main&gt; was used to ensure accessibility and
+                    tell users the
+                    logical format of the content on each page.
+                </p>
+
+                <h2>Metadata</h2>
+                <p>
+                    I believe that I have provided a lot of information in my metadata particularly in the head section
+                    of each HTML document. I use the description and keywords to help search engines display relevant
+                    information parts to users that may come across my website. I also include the author metadata to
+                    show that the developer of the website and subsequent webpages is me. The standard HTML template
+                    ensures that I make use of the viewport and character encoding in all my HTML files. All the
+                    metadata that I used helps improve the usability, accessibility, and search visibility of my
+                    website.
+                </p>
+
+                <h2>CSS</h2>
+                <p>
+                    I keep my code maintainable by excluding any in-line styling in my files and preventing
+                    unpredictable overriding of global stylings. The global styling is embedded with the link tag in the
+                    head section of the HTML files. I use flexbox to allow for flexible layouts and responsive design
+                    across different devices. With these I use media queries to adjust my styling for the different
+                    device screen sizes. The use of rem and % for relative units to ensure that there is better
+                    scalability of my content such as the text and size of images and icons.
+                </p>
+
+                <h2>JavaScript</h2>
+                <p>
+                    I make use of event listeners and DOM manipulation rather than hard coded capabilities. This is
+                    shown clearly through the navigation of my pages. Aspects such as closing and opening my navigation
+                    bar as well as viewing and looping through the previews of my sub-pages like my blogs, designs, and
+                    essays. This ensures that there is a more dynamic process to my website and reusable logic and
+                    events can be placed into functions to be easily used multiple times to reduce redundancy within my
+                    code. The use of asynchronous functions also helps my webpages from having to reload every time the
+                    user navigates to new pages.
+                </p>
+
+                <h2>Going forward</h2>
+                <p>
+                    There are definitely aspects of my website that I would want to improve on such as a more cohesive
+                    feel to the layout of my website almost as the feeling of a journey. This could be through creating
+                    a pseudo movement of the background to make it appear that the user to orbiting a celestial body.
+                    The final implementation of my website is a good foundation with various unconventional interaction
+                    points such as the navigation circle as well as conventional interactions such as the navigation bar
+                    with the drop-down menu.
+                </p>
+        </section>
+    </article>
+</body>
+
+</html>

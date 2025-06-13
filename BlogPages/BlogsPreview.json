@@ -48,5 +48,10 @@
         "title": "(10) Can we build an ethical internet?",
         "description": "There should be a balance between innovation of data-driven achievements with privacy protection of individuals, businesses, and society as a whole...",
         "link": "../BlogPages/Blog10.html"
+    },
+    "Blog11": {
+        "title": "(11) Approaching Justice and Ethics in my Programming",
+        "description": "Collaboration does not only have to occur in spaces such as online spaces but actually designing and creating with communities....",
+        "link": "../BlogPages/Blog11.html"
     }
 }
