@@ -67,8 +67,8 @@ body
     justify-content: center;
     align-items: flex-start;
     width: 70vw;
-    height: 90vh;
-    font-size: 2rem;
+    height: 60vh;
+    font-size: 1.5rem;
     flex-direction: column;
 
     padding-inline: 1rem;
@@ -192,12 +192,49 @@ body
 
 /* Syling for the ISS location API */
 #issLocation {
-    background-color: FAFAFA;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
+    color: #f9f9f9;
+    padding: 2rem 1rem 1rem;
+    border-radius: 0.5rem;
     text-align: center;
     font-size: 2rem;
+}
+
+#Skills {
+    color: #f9f9f9;
+    text-align: center;
+}
+
+#Star {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 3rem;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill p {
+    font-size: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  gap: 1rem;
+}
+
+.star-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-family: 'Material Symbols Outlined';
+  font-size: 32px;
+  color: gold;
+  display: inline-block;
 }
 
 /* Media query for responsive design */
