@@ -60,16 +60,42 @@ function fetchData(file) {
     fetch(file)
         .then(response => response.json())
         .then(data => {
-            fetchedData = data; // Store data globally
-            updatePreview(data);
+            fetchedData = data;
+
+            if (pageType === "Portfolio") {
+                populateGallery(data);
+            } else {
+                updatePreview(data); // used on Essays/Blogs
+            }
         })
         .catch(error => console.error("Error loading data:", error));
+}
+
+function populateGallery(data) {
+    const gallery = document.getElementById("Gallery");
+    gallery.innerHTML = "";
+
+    for (let key in data) {
+        const entry = data[key];
+
+        const item = document.createElement("div");
+        item.className = "gallery-item";
+
+        item.innerHTML = `
+            <img src="${entry.image}" alt="${entry.title}">
+            <h3>${entry.title}</h3>
+            <p>${entry.description}</p>
+            
+        `;
+
+        gallery.appendChild(item);
+    }
 }
 
 // Load different JSON files depending on the page type
 const pageType = document.body.getAttribute("data-page"); // Detect which page we're on
 if (pageType === "Portfolio") {
-    fetchData("portfolio.json");
+    fetchData("../PortfolioPages/PortfolioPreview.json");
 } else if (pageType === "Essays") {
     fetchData("../EssayPages/EssayPreview.json");
 } else if (pageType === "Designs") {
@@ -112,30 +138,42 @@ document.addEventListener("mousemove", (e) => {
     const angle = getAngle(cx, cy, e.clientX, e.clientY);
     currentRotation = angle - startAngle;
 
+    // Snap rotation transform
     dragCircle.style.transform = `rotate(${currentRotation}deg)`;
 
-    // Determine active circle
-    const index = Math.round((currentRotation % 360) / (360 / indicators.length));
-    const normalizedIndex = ((index % indicators.length) + indicators.length) % indicators.length;
-    const selected = indicators[normalizedIndex];
+    // Compute which indicator is currently selected
+    const segments = indicators.length;
+    const rotationPerDot = 360 / segments;
+    let index = Math.round(currentRotation / rotationPerDot);
+
+    // Normalize index in case of negative rotation
+    index = ((index % segments) + segments) % segments;
+
+    const selected = indicators[index];
     const target = selected.getAttribute("data-target");
 
-    if (fetchedData[target]) { // Use fetched JSON data
+    // Scroll gallery to matching item
+    const gallery = document.getElementById("Gallery");
+    const scrollPerItem = gallery.querySelector(".gallery-item").offsetWidth + 32;
+    const targetScroll = index * scrollPerItem;
+    gallery.scrollTo({
+        left: targetScroll,
+        behavior: "smooth"
+    });
+
+    // Update preview (if not on Portfolio)
+    if (fetchedData[target] && pageType !== "Portfolio") {
         Title.textContent = fetchedData[target].title;
         Desc.textContent = fetchedData[target].description;
         DynamicButton.href = fetchedData[target].link;
+        DynamicButton.style.display = "inline-block";
     }
 
-    DynamicButton.style.display = "inline-block";
-
-    indicators.forEach((circle) => {
-        circle.classList.remove("active"); // Remove fill from all circles
-    });
-
-    if (selected) {
-        selected.classList.add("active"); // Apply fill to the active one
-    }
+    // Highlight correct indicator
+    indicators.forEach((circle) => circle.classList.remove("active"));
+    selected.classList.add("active");
 });
+
 
 document.addEventListener("mouseup", () => {
     isDragging = false;
@@ -147,6 +185,14 @@ indicators.forEach((circle, i) => {
         indicators.forEach((c) => c.classList.remove("active")); // Reset all circles
         circle.classList.add("active"); // Fill the clicked one
         DynamicButton.style.display = "inline-block";
+
+        const scrollPerItem = gallery.querySelector(".gallery-item").offsetWidth + 32;
+        const targetScroll = i * scrollPerItem;
+        gallery.scrollTo({
+            left: targetScroll,
+            behavior: "smooth"
+        });
+
 
         const target = circle.getAttribute("data-target");
 

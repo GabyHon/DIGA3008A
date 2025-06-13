@@ -117,52 +117,50 @@ h1
     padding: 2rem;
 }
 
-.Games
-{
-    height: 115vh;
+.gallery-wrapper {
+    overflow-x: auto;
+    padding: 1rem;
 }
 
-.Games section
-{
-    text-align: justify;
-    color: #fafafad5;
+.gallery {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 2rem;
-    flex-direction: column-reverse;
-
-    padding-inline: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    color: #FDD6FF;
 }
 
-.Item
-{
-    flex: 1;
-    overflow-y: auto;
-    padding-bottom: 4rem;
-    color: #fafafa; 
+.gallery-item {
+    flex: 0 0 300px; /* This width MUST match what you use in JS */
+    margin-right: 2rem;
+}
+
+.gallery-item img {
+    width: 90%;
+    height: 40%;
+    border-radius: 8px;
 }
 
 /* Width of the scrollbar */
-.Item::-webkit-scrollbar {
-    width: 15px;
+.gallery::-webkit-scrollbar {
+    width: 1rem;
+    margin-left: 2rem;
 }
 
 /* Track (background) */
-.Item::-webkit-scrollbar-track {
+.gallery::-webkit-scrollbar-track {
     background: #151515;
-    border-radius: 10px;
+    border-radius: 2rem;
 }
 
 /* Handle (the part you drag) */
-.Item::-webkit-scrollbar-thumb {
+.gallery::-webkit-scrollbar-thumb {
     height: 2px;
     background: linear-gradient(to top, #ff7eb3 10%, #416C9D 50%);
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 /* Handle on hover */
-.Item::-webkit-scrollbar-thumb:hover {
+.gallery::-webkit-scrollbar-thumb:hover {
     background: #E6A6FF;
     cursor: pointer;
 }

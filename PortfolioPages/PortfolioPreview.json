@@ -1,12 +1,83 @@
 {
     "Game1": {
-        "title": "(1) Gravity Flip Platformer Prototype",
-        "description": "Game Design prototype 1 gravity mechanic where the player is required to travel around the environmentwhile avoid colliding with spikes. There are a few coloured items that the player can walk into to change the colour of the character.",
-        "image": "../PortfolioPages/PortfolioImages/Gravity1.png"
+        "title": "Gravity Flip Platformer Prototype",
+        "description": "The above images show my Game Design prototype 1 gravity mechanic where the player is required to travel around the environment while avoid colliding with spikes. There are a few coloured items that the player can walk into to change the colour of the character. There was no end goal, this prototype was just to allow the player to learn about the gravity filpping mechanic while avoiding obstacles and running into colour changing items.",
+        "image": "../PortfolioPages/PortfolioImages/Games/Gravity1.png"
     },
     "Game2": {
-        "title": "(2) Camera Prototype",
-        "description": "Game Design prototype 2 camera mechanic where the player is required to move around the environment using the mouse to change the camera view.",
-        "image": "../PortfolioPages/PortfolioImages/CamMech1.png"
+        "title": "Camera Prototype",
+        "description": "The above images show my Game Design prototype 2 camera mechanic where the player is required to move around the environment using the mouse to change the camera view. I wanted to work with Cinemachine in Unity to create a similar mechanic seen in Captain Toad Treasure Tracker where moving the camera angle allows the player to view hidden pathways or collectable items.",
+        "image": "../PortfolioPages/PortfolioImages/Games/CamMech1.png"
+    },
+    "Art1": {
+        "title": "BB8 Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/BB8Drawing.png"
+    }
+    ,
+    "Art2": {
+        "title": "Chewie Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/ChewieDrawing.png"
+    }
+    ,
+    "Art3": {
+        "title": "Draco Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/DracoDrawing.png"
+    }
+    ,
+    "Art4": {
+        "title": "Grogu Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/GroguDrawing.png"
+    }
+    ,
+    "Art5": {
+        "title": "Guitar Box",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/GuitarBox.png"
+    }
+    ,
+    "Art6": {
+        "title": "LGO Painting",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/LGOPainting.png"
+    }
+    ,
+    "Art7": {
+        "title": "Luna Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/LunaDrawing.png"
+    }
+    ,
+    "Art8": {
+        "title": "Millennium Falcon",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/MillenniumFalcon.png"
+    }
+    ,
+    "Art9": {
+        "title": "Piano Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/PianoDrawing.png"
+    }
+    ,
+    "Art10": {
+        "title": "Rebel Alliance and Rebel Resistance",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/RebelAllianceResistance.png"
+    }
+    ,
+    "Art11": {
+        "title": "Saiki Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/SaikiDrawing.png"
+    }
+    ,
+    "Art12": {
+        "title": "Storm Trooper Drawing",
+        "description": "",
+        "image": "../PortfolioPages/PortfolioImages/Art/StormTrooperDrawing.png"
     }
 }
