@@ -122,6 +122,7 @@ body
    align-items: center;
    
    position: sticky;
+   backdrop-filter: blur(1rem);
    top: 20vh;
 
    transition: all 3s;

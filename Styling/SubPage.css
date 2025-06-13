@@ -12,7 +12,7 @@
     height: 100%;
     width: 70vw;
     font-size: 1rem;
-    margin: 0rem 1rem;
+    margin: 5.5rem 1rem;
     padding-left: 10vw;
     padding-right: 0.5vw;
     overflow-y: scroll;
@@ -21,20 +21,21 @@
 
 /* Width of the scrollbar */
 .h-entry::-webkit-scrollbar {
-    width: 15px;
+    width: 1rem;
+    margin-left: 2rem;
 }
 
 /* Track (background) */
 .h-entry::-webkit-scrollbar-track {
     background: #151515;
-    border-radius: 10px;
+    border-radius: 2rem;
 }
 
 /* Handle (the part you drag) */
 .h-entry::-webkit-scrollbar-thumb {
     height: 2px;
     background: linear-gradient(to top, #ff7eb3 10%, #416C9D 50%);
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 /* Handle on hover */
